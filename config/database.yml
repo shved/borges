@@ -80,6 +80,6 @@ test:
 #
 production:
   <<: *default
-  database: borges_production
+  database: borges
   username: borges
   password: <%= ENV['BORGES_DATABASE_PASSWORD'] %>
