@@ -1,0 +1,78 @@
+/*
+ *= require_tree .
+ *= require_self
+ */
+
+@import url(https://fonts.googleapis.com/css?family=Merriweather:300&subset=latin,cyrillic-ext,latin-ext,cyrillic);
+
+body {
+  padding: 0;
+  margin: 0;
+
+  p, a {
+    font-family: 'Merriweather', serif;
+    font-size: 18px;
+    line-height: 1.5em;
+  }
+
+  p {
+    margin: 50px auto;
+  }
+
+  a {
+    color: blue;
+    text-decoration: none;
+    &:hover {
+      border-bottom: 1px solid blue;
+    }
+  }
+
+  .container {
+    max-width: 1200px;
+    background: red;
+  }
+
+  .tides {
+    margin-top: 140px;
+  }
+
+  textarea#input {
+    resize: none;
+    border: none;
+    margin-top: 40px;
+    width: 100%;
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .saved {
+    display: inline;
+    margin-left: 25px;
+    font-size: 14px;
+    color: gray;
+  }
+
+  .fb-like {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+  }
+
+  .quote-block {
+    float: right;
+    width: 50%;
+
+    p {
+      margin: 0;
+      font-size: 12px;
+    }
+
+    p.caption {
+      text-align: right;
+      margin-top: 10px;
+      font-size: 10px;
+      font-style: italic;
+    }
+  }
+}
