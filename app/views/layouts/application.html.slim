@@ -9,6 +9,17 @@ html
     = javascript_include_tag 'application'
 
   body
-    p.notice = notice
-    p.alert = alert
-    = yield
+    .main_wrapper
+      p.notice = notice
+      p.alert = alert
+      div.nav_wrapper
+        nav.nav
+          = link_to 'Б', game_results_path, class: 'logo'
+          = link_to games_path, class: 'games_link' do
+            = image_tag 'games.png', size: '40x40', class: 'games_icon'
+
+      div.content_wrapper
+        = yield
+
+      div.right_wrapper
+        = yield :right_wrapper

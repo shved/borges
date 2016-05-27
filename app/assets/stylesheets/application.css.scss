@@ -3,11 +3,66 @@
  *= require_self
  */
 
-@import url(https://fonts.googleapis.com/css?family=Merriweather:300&subset=latin,cyrillic-ext,latin-ext,cyrillic);
+@import url(https://fonts.googleapis.com/css?family=Merriweather:400,300,700,300italic,400italic,700italic&subset=latin,cyrillic-ext,latin-ext,cyrillic);
 
 body {
   padding: 0;
   margin: 0;
+
+  .main_wrapper {
+    margin: 0 auto;
+    max-width: 1080px;
+    background: red;
+    .nav_wrapper {
+      clear: both;
+    }
+    .content_wrapper {
+      margin-left: 180px;
+      background: blue;
+      padding: 60px;
+    }
+  }
+
+  nav {
+    display: block;
+    float: left;
+    width: 180px;
+    a.games_link {
+      margin: 60px 0 60px 60px;
+      display: block;
+      width: 40px;
+      height: 40px;
+      border: 2px solid black;
+      border-radius: 40px;
+      padding: 10px;
+      &:hover {
+        border: 2px solid gray;
+      }
+      image.games_icon {
+        display: block;
+        width: 40px;
+        height: 40px;
+      }
+    }
+    a.logo {
+      text-align: center;
+      margin: 60px auto;
+      display: block;
+      width: 60px;
+      height: 60px;
+      border: 2px solid black;
+      border-radius: 30px;
+      font-size: 42px;
+      line-height: 60px;
+      color: black;
+      font-family: 'Merriweather', serif;
+      font-weight: 700;
+      font-style: italic;
+      &:hover {
+        border: 2px solid gray;
+      }
+    }
+  }
 
   p, a {
     font-family: 'Merriweather', serif;
@@ -27,30 +82,15 @@ body {
     }
   }
 
-  .container {
-    max-width: 1200px;
-    background: red;
-  }
-
-  .tides {
-    margin-top: 140px;
-  }
-
-  textarea#input {
+  textarea {
     resize: none;
-    border: none;
+    border: black;
+    border-radius: 5px;
     margin-top: 40px;
     width: 100%;
     &:focus {
       outline: none;
     }
-  }
-
-  .saved {
-    display: inline;
-    margin-left: 25px;
-    font-size: 14px;
-    color: gray;
   }
 
   .fb-like {
@@ -59,20 +99,4 @@ body {
     left: 20px;
   }
 
-  .quote-block {
-    float: right;
-    width: 50%;
-
-    p {
-      margin: 0;
-      font-size: 12px;
-    }
-
-    p.caption {
-      text-align: right;
-      margin-top: 10px;
-      font-size: 10px;
-      font-style: italic;
-    }
-  }
 }
