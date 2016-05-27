@@ -12,14 +12,16 @@ html
     .main_wrapper
       p.notice = notice
       p.alert = alert
-      div.nav_wrapper
+      .nav_wrapper
         nav.nav
           = link_to 'Б', game_results_path, class: 'logo'
           = link_to games_path, class: 'games_link' do
-            = image_tag 'games.png', size: '40x40', class: 'games_icon'
+            = image_tag 'games.png', size: '30x30', class: 'games_icon'
+          = link_to new_author_registration_path, class: 'author_link' do
+            = image_tag 'author.png', size: '30x30', class: 'author_icon'
 
-      div.content_wrapper
+      .content_wrapper
         = yield
 
-      div.right_wrapper
+      .right_wrapper
         = yield :right_wrapper

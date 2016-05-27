@@ -8,32 +8,41 @@
 body {
   padding: 0;
   margin: 0;
+  background-color: black;
 
   .main_wrapper {
     margin: 0 auto;
     max-width: 1080px;
-    background: red;
+    background: white;
     .nav_wrapper {
       clear: both;
     }
     .content_wrapper {
-      margin-left: 180px;
-      background: blue;
-      padding: 60px;
+      display: block;
+      margin-left: 120px;
+      margin-right: 230px;
+      border: 1px solid black;
+      padding: 30px 60px 60px 60px;
+    }
+    .right_wrapper {
+      display: block;
+      background: red;
+      float: right;
+      width: 230px;
     }
   }
 
   nav {
     display: block;
     float: left;
-    width: 180px;
+    width: 120px;
     a.games_link {
-      margin: 60px 0 60px 60px;
+      margin: 30px auto;
       display: block;
-      width: 40px;
-      height: 40px;
+      width: 30px;
+      height: 30px;
       border: 2px solid black;
-      border-radius: 40px;
+      border-radius: 30px;
       padding: 10px;
       &:hover {
         border: 2px solid gray;
@@ -46,27 +55,81 @@ body {
     }
     a.logo {
       text-align: center;
-      margin: 60px auto;
+      margin: 30px auto;
       display: block;
-      width: 60px;
-      height: 60px;
+      width: 50px;
+      height: 50px;
       border: 2px solid black;
-      border-radius: 30px;
-      font-size: 42px;
+      border-radius: 50px;
+      font-size: x-large;
       line-height: 60px;
       color: black;
-      font-family: 'Merriweather', serif;
+      font-family: 'Merriweather', Georgia;
       font-weight: 700;
-      font-style: italic;
       &:hover {
         border: 2px solid gray;
       }
     }
   }
 
+  a.author_link {
+    margin: 30px auto;
+    display: block;
+    height: 30px;
+    width: 30px;
+    border: 2px solid black;
+    border-radius: 30px;
+    padding: 10px;
+    &:hover {
+      border: 2px solid gray;
+    }
+    image.author_icon {
+      display: block;
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  ul.game_results {
+    list-style: none;
+    .game_result {
+      a.game_result__name {
+        color: gray;
+        font-size: small;
+        font-style: italic;
+      }
+      p.game_result__body {
+        margin: 10px auto;
+        font-size: medium;
+      }
+      p.game_result__footer {
+        margin-top: 10px;
+        a.game_result__footer_author {
+          font-size: medium;
+        }
+        span.game_result__footer_date {
+          margin-left: 10px;
+          font-size: small;
+          font-style: italic;
+          color: gray;
+        }
+      }
+    }
+  }
+
+  p.divider {
+    width: 100%;
+    margin: 10px auto;
+    text-align: center;
+    vertical-align: center;
+    letter-spacing: 10px;
+    font-size: large;
+    font-family: 'Merriweather', Georgia;
+  }
+
   p, a {
-    font-family: 'Merriweather', serif;
-    font-size: 18px;
+    font-family: 'Merriweather', Georgia;
+    font-size: 1.2em;
     line-height: 1.5em;
   }
 
