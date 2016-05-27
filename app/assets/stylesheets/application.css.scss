@@ -21,8 +21,7 @@ body {
       display: block;
       margin-left: 120px;
       margin-right: 230px;
-      border: 1px solid black;
-      padding: 30px 60px 60px 60px;
+      padding: 30px;
     }
     .right_wrapper {
       display: block;
@@ -115,6 +114,10 @@ body {
         }
       }
     }
+  }
+
+  ul.games {
+    li.game {}
   }
 
   p.divider {
