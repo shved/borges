@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160528123145) do
+ActiveRecord::Schema.define(version: 20160528133609) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,7 +33,7 @@ ActiveRecord::Schema.define(version: 20160528123145) do
   create_table "game_results", force: :cascade do |t|
     t.integer  "author_id"
     t.integer  "game_id"
-    t.jsonb    "body"
+    t.text     "body"
     t.jsonb    "props"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -47,6 +47,8 @@ ActiveRecord::Schema.define(version: 20160528123145) do
     t.string "name_en"
     t.jsonb  "props"
     t.string "game_type"
+    t.text   "desc_ru"
+    t.text   "desc_en"
   end
 
   create_table "result_likes", force: :cascade do |t|
