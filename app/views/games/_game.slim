@@ -1,5 +1,5 @@
 li.game
-  h3 = game.name
+  h3 = link_to game.name, new_game_result_path(game_type: @game_type)
   p = game.desc
   p.divider
     | ***
