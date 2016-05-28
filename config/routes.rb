@@ -6,6 +6,7 @@ Rails.application.routes.draw do
 
   root to: "game_results#index"
 
-  resources :games
-  resources :game_results
+  resources :games, only: [:index]
+  resources :game_results, only: [:new, :create, :index]
+  resources :result_likes, only: [:create]
 end

@@ -131,7 +131,18 @@ body {
   }
 
   ul.games {
-    li.game {}
+    list-style: none;
+    li.game {
+      margin: 0 0 30px 0;
+      h3 {
+        margin: 5px 0;
+      }
+      p {
+        margin: 0;
+        font-size: small;
+        color: gray;
+      }
+    }
   }
 
   p.caption {
@@ -154,10 +165,22 @@ body {
     font-family: 'Merriweather', Georgia;
     font-size: 1.2em;
     line-height: 1.5em;
+    font-weight: 300;
   }
 
-  p {
-    margin: 50px auto;
+  h1 {
+    font-size: x-large;
+    font-weight: 400;
+  }
+
+  h2 {
+    font-size: larger;
+    font-weight: 300;
+  }
+
+  h3 {
+    font-size: large;
+    font-weight: 300;
   }
 
   a {
@@ -184,5 +207,4 @@ body {
     bottom: 20px;
     left: 20px;
   }
-
 }
