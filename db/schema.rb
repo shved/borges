@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160528085324) do
+ActiveRecord::Schema.define(version: 20160528123145) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 20160528085324) do
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
     t.index ["email"], name: "index_authors_on_email", unique: true, using: :btree
+    t.index ["login", "email"], name: "index_authors_on_login_and_email", using: :btree
     t.index ["reset_password_token"], name: "index_authors_on_reset_password_token", unique: true, using: :btree
   end
 
@@ -36,6 +37,7 @@ ActiveRecord::Schema.define(version: 20160528085324) do
     t.jsonb    "props"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["author_id", "game_id"], name: "index_game_results_on_author_id_and_game_id", using: :btree
     t.index ["author_id"], name: "index_game_results_on_author_id", using: :btree
     t.index ["game_id"], name: "index_game_results_on_game_id", using: :btree
   end
@@ -47,6 +49,18 @@ ActiveRecord::Schema.define(version: 20160528085324) do
     t.string "game_type"
   end
 
+  create_table "result_likes", force: :cascade do |t|
+    t.integer  "game_result_id"
+    t.integer  "author_id"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.index ["author_id", "game_result_id"], name: "index_result_likes_on_author_id_and_game_result_id", using: :btree
+    t.index ["author_id"], name: "index_result_likes_on_author_id", using: :btree
+    t.index ["game_result_id"], name: "index_result_likes_on_game_result_id", using: :btree
+  end
+
   add_foreign_key "game_results", "authors"
   add_foreign_key "game_results", "games"
+  add_foreign_key "result_likes", "authors"
+  add_foreign_key "result_likes", "game_results"
 end
