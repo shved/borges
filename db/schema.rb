@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160528133609) do
+ActiveRecord::Schema.define(version: 20160529093205) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -59,6 +59,12 @@ ActiveRecord::Schema.define(version: 20160528133609) do
     t.index ["author_id", "game_result_id"], name: "index_result_likes_on_author_id_and_game_result_id", using: :btree
     t.index ["author_id"], name: "index_result_likes_on_author_id", using: :btree
     t.index ["game_result_id"], name: "index_result_likes_on_game_result_id", using: :btree
+  end
+
+  create_table "theme_suggestions", force: :cascade do |t|
+    t.text  "body_ru"
+    t.text  "body_en"
+    t.jsonb "game_types"
   end
 
   add_foreign_key "game_results", "authors"

@@ -1,3 +1,7 @@
 h1 = @game.name
-p = @game.desc
 textarea
+
+- content_for :right_wrapper do
+  = simple_format @game.desc,
+                  class: 'caption',
+                  wrapper_tag: 'p'
