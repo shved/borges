@@ -3,5 +3,5 @@ class ThemeSuggestion < ApplicationRecord
     scope type, -> { where("game_types ? '#{type}'") }
   end
 
-  translates :body
+  translates :text
 end
