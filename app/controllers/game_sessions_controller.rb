@@ -1,4 +1,4 @@
-class GameResultsController < ApplicationController
+class GameSessionsController < ApplicationController
   def index
     render :index
   end

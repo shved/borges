@@ -103,24 +103,24 @@ body {
     }
   }
 
-  ul.game_results {
+  ul.game_sessions {
     list-style: none;
-    .game_result {
-      a.game_result__name {
+    .game_session {
+      a.game_session__name {
         color: gray;
         font-size: small;
         font-style: italic;
       }
-      p.game_result__body {
+      p.game_session__body {
         margin: 10px auto;
         font-size: medium;
       }
-      p.game_result__footer {
+      p.game_session__footer {
         margin-top: 10px;
-        a.game_result__footer_author {
+        a.game_session__footer_author {
           font-size: medium;
         }
-        span.game_result__footer_date {
+        span.game_session__footer_date {
           margin-left: 10px;
           font-size: small;
           font-style: italic;

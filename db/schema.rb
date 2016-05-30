@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160529093205) do
+ActiveRecord::Schema.define(version: 20160530055211) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,16 +30,16 @@ ActiveRecord::Schema.define(version: 20160529093205) do
     t.index ["reset_password_token"], name: "index_authors_on_reset_password_token", unique: true, using: :btree
   end
 
-  create_table "game_results", force: :cascade do |t|
+  create_table "game_sessions", force: :cascade do |t|
     t.integer  "author_id"
     t.integer  "game_id"
     t.text     "body"
     t.jsonb    "props"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["author_id", "game_id"], name: "index_game_results_on_author_id_and_game_id", using: :btree
-    t.index ["author_id"], name: "index_game_results_on_author_id", using: :btree
-    t.index ["game_id"], name: "index_game_results_on_game_id", using: :btree
+    t.index ["author_id", "game_id"], name: "index_game_sessions_on_author_id_and_game_id", using: :btree
+    t.index ["author_id"], name: "index_game_sessions_on_author_id", using: :btree
+    t.index ["game_id"], name: "index_game_sessions_on_game_id", using: :btree
   end
 
   create_table "games", force: :cascade do |t|
@@ -51,14 +51,14 @@ ActiveRecord::Schema.define(version: 20160529093205) do
     t.text   "desc_en"
   end
 
-  create_table "result_likes", force: :cascade do |t|
-    t.integer  "game_result_id"
+  create_table "likes", force: :cascade do |t|
+    t.integer  "game_session_id"
     t.integer  "author_id"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
-    t.index ["author_id", "game_result_id"], name: "index_result_likes_on_author_id_and_game_result_id", using: :btree
-    t.index ["author_id"], name: "index_result_likes_on_author_id", using: :btree
-    t.index ["game_result_id"], name: "index_result_likes_on_game_result_id", using: :btree
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.index ["author_id", "game_session_id"], name: "index_likes_on_author_id_and_game_session_id", using: :btree
+    t.index ["author_id"], name: "index_likes_on_author_id", using: :btree
+    t.index ["game_session_id"], name: "index_likes_on_game_session_id", using: :btree
   end
 
   create_table "theme_suggestions", force: :cascade do |t|
@@ -67,8 +67,8 @@ ActiveRecord::Schema.define(version: 20160529093205) do
     t.jsonb "game_types"
   end
 
-  add_foreign_key "game_results", "authors"
-  add_foreign_key "game_results", "games"
-  add_foreign_key "result_likes", "authors"
-  add_foreign_key "result_likes", "game_results"
+  add_foreign_key "game_sessions", "authors"
+  add_foreign_key "game_sessions", "games"
+  add_foreign_key "likes", "authors"
+  add_foreign_key "likes", "game_sessions"
 end

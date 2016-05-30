@@ -1,5 +1,5 @@
 class Game < ApplicationRecord
-  has_many :game_results
+  has_many :game_sessions
 
   validates :game_type, inclusion: { in: %w(start_with_letter avoid_letter wrap_word) }
 

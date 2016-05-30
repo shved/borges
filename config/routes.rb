@@ -4,9 +4,9 @@ Rails.application.routes.draw do
     path_names: { sign_in: 'login', sign_out: 'logout' },
     controllers: { sessions: 'writers/sessions' }
 
-  root to: "game_results#index"
+  root to: "game_sessions#index"
 
   resources :games, only: [:index]
-  resources :game_results, only: [:new, :create, :index]
-  resources :result_likes, only: [:create]
+  resources :game_sessions, only: [:new, :create, :index]
+  resources :likes, only: [:create]
 end

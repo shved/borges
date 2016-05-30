@@ -1,4 +1,4 @@
-class GameResult < ApplicationRecord
+class GameSession < ApplicationRecord
   belongs_to :game
   belongs_to :author
 

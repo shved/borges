@@ -1,4 +1,4 @@
-class ResultLike < ApplicationRecord
-  belongs_to :game_result
+class Like < ApplicationRecord
+  belongs_to :game_session
   belongs_to :author
 end
