@@ -10,6 +10,7 @@ html
 
   body
     .main_wrapper
+      .notice
       p.notice = notice
       p.alert = alert
 
@@ -21,7 +22,7 @@ html
       .left_nav_wrapper
         nav.left_nav
           = link_to games_path, class: 'games_link' do
-            = image_tag 'games.png', size: '30x30', class: 'games_icon'
+            = image_tag 'games.png', size: '42x42', class: 'games_icon'
 
       .content_wrapper
         = yield
@@ -31,3 +32,7 @@ html
 
       .footer
         | (c)2016
+
+script src = "https://use.typekit.net/zvx7vex.js"
+javascript:
+  try{Typekit.load({ async: true });}catch(e){}

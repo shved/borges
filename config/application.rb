@@ -13,5 +13,7 @@ module Borges
     # -- all .rb files in that directory are automatically loaded.
     config.i18n.default_locale = :ru
     config.i18n.available_locales = [:ru, :en]
+
+    config.assets.paths << Rails.root.join("app", "assets", "fonts")
   end
 end

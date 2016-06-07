@@ -5,6 +5,24 @@
 
 @import url(https://fonts.googleapis.com/css?family=Merriweather:400,300,700,300italic,400italic,700italic&subset=latin,cyrillic-ext,latin-ext,cyrillic);
 
+@font-face {
+  font-family: 'websymbolsligaregular';
+  src: font-url('websymbolsliga-regular.eot');
+  src: font-url('websymbolsliga-regular.eot?#iefix') format('embedded-opentype'),
+       font-url('websymbolsliga-regular.woff') format('woff'),
+       font-url('websymbolsliga-regular.ttf') format('truetype'),
+       font-url('websymbolsliga-regular.svg#websymbolsregular') format('svg');
+}
+
+@font-face {
+  font-family: 'Foco_Bd';
+  src: font-url('Foco_Bd.eot');
+  src: font-url('Foco_Bd.eot?#iefix') format('embedded-opentype'),
+       font-url('Foco_Bd.woff') format('woff'),
+       font-url('Foco_Bd.ttf') format('truetype'),
+       font-url('Foco_Bd.svg#foco_bd') format('svg');
+}
+
 body {
   padding: 0;
   margin: 0;
@@ -13,16 +31,16 @@ body {
     margin: 0 auto;
     max-width: 1200px;
     padding: 0;
-    // background: gray;
+    background: gray;
     .top_nav_wrapper {
       height: 80px;
-      // background: blue;
+      background: blue;
     }
     .left_nav_wrapper {
       float: left;
       clear: none;
       width: 120px;
-      // background: yellow;
+      background: yellow;
       margin: 0;
     }
     .content_wrapper {
@@ -44,16 +62,10 @@ body {
   nav.left_nav {
     display: block;
     a.games_link {
-      margin: 30px auto;
+      margin: 130px auto;
       display: block;
-      width: 30px;
-      height: 30px;
-      border: 2px solid black;
-      border-radius: 30px;
-      padding: 10px;
-      &:hover {
-        border: 2px solid gray;
-      }
+      width: 42px;
+      height: 42px;
       image.games_icon {
         display: block;
         width: 40px;
@@ -65,21 +77,18 @@ body {
   .top_nav_wrapper {
     a.logo {
       text-align: center;
-      margin-left: 32px;
-      margin-top: 20px;
+      margin-left: 48px;
+      margin-top: 76px;
       display: block;
-      float: left;
-      width: 50px;
-      height: 50px;
-      border: 2px solid black;
-      border-radius: 50px;
-      font-size: 32px;
-      line-height: 54px;
+      line-height: 24px;
+      height: 32px;
+      width: 24px;
+      font-size: 48px;
       color: black;
-      font-family: 'Merriweather', Georgia;
-      font-weight: 700;
+      font-family: 'Foco_Bd';
       &:hover {
         border: 2px solid gray;
+        border-radius: px;
       }
     }
     a.author_link {
@@ -158,11 +167,13 @@ body {
     vertical-align: center;
     letter-spacing: 10px;
     font-size: large;
-    font-family: 'Merriweather', Georgia;
+    font-family: 'MorePro';
+    // font-family: 'Merriweather', Georgia;
   }
 
   p, a {
-    font-family: 'Merriweather', Georgia;
+    // font-family: 'Merriweather', Georgia;
+    font-family: 'MorePro';
     font-size: 1.2em;
     line-height: 1.5em;
     font-weight: 300;
