@@ -4,10 +4,9 @@ html
     title
       | Borges
     = csrf_meta_tags
-
+    = typekit 'zvx7vex'
     = stylesheet_link_tag    'application', media: 'all'
     = javascript_include_tag 'application'
-    = javascript_include_tag 'https://use.typekit.net/zvx7vex.js'
 
   body
     .main_wrapper
@@ -34,5 +33,3 @@ html
       .footer
         | (c)2016
 
-javascript:
-  'try{Typekit.load({ async: true });}catch(e){}'
