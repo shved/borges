@@ -3,7 +3,7 @@
  *= require_self
  */
 
-@import url(https://fonts.googleapis.com/css?family=Merriweather:400,300,700,300italic,400italic,700italic&subset=latin,cyrillic-ext,latin-ext,cyrillic);
+// @import url(https://fonts.googleapis.com/css?family=Merriweather:400,300,700,300italic,400italic,700italic&subset=latin,cyrillic-ext,latin-ext,cyrillic);
 
 @font-face {
   font-family: 'websymbolsligaregular';
@@ -12,15 +12,6 @@
        font-url('websymbolsliga-regular.woff') format('woff'),
        font-url('websymbolsliga-regular.ttf') format('truetype'),
        font-url('websymbolsliga-regular.svg#websymbolsregular') format('svg');
-}
-
-@font-face {
-  font-family: 'Foco_Bd';
-  src: font-url('Foco_Bd.eot');
-  src: font-url('Foco_Bd.eot?#iefix') format('embedded-opentype'),
-       font-url('Foco_Bd.woff') format('woff'),
-       font-url('Foco_Bd.ttf') format('truetype'),
-       font-url('Foco_Bd.svg#foco_bd') format('svg');
 }
 
 body {
@@ -85,7 +76,7 @@ body {
       width: 24px;
       font-size: 48px;
       color: black;
-      font-family: 'Foco_Bd';
+      font-family: 'foco';
       &:hover {
         border: 2px solid gray;
         border-radius: px;
@@ -167,13 +158,11 @@ body {
     vertical-align: center;
     letter-spacing: 10px;
     font-size: large;
-    font-family: 'MorePro';
-    // font-family: 'Merriweather', Georgia;
+    font-family: 'ff-more-web-pro', 'Merriweather', Georgia;
   }
 
   p, a {
-    // font-family: 'Merriweather', Georgia;
-    font-family: 'MorePro';
+    font-family: 'ff-more-web-pro', 'Merriweather', Georgia;
     font-size: 1.2em;
     line-height: 1.5em;
     font-weight: 300;

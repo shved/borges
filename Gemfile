@@ -12,6 +12,7 @@ gem 'pry-rails'
 gem 'capistrano-rails'
 gem 'slim'
 gem 'devise'
+gem 'typekit-rails'
 
 group :development, :test do
   gem 'byebug', platform: :mri
