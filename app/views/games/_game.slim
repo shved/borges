@@ -1,5 +1,5 @@
 li.game
-  h3 = link_to game.name, new_game_session_path(game_type: game.game_type)
+  h3.game_index_title = link_to game.name, new_game_session_path(game_type: game.game_type)
   p = game.desc
   p.divider
     | ***
