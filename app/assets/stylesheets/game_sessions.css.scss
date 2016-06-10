@@ -1,0 +1,26 @@
+ul.game_sessions {
+  list-style: none;
+  .game_session {
+    a.game_session__name {
+      color: #8b97a0;
+      font-size: 12px;
+      font-style: italic;
+    }
+    p.game_session__body {
+      margin: 8px auto;
+      font-size: medium;
+    }
+    p.game_session__footer {
+      margin-top: 8px;
+      a.game_session__footer_author {
+        font-size: medium;
+      }
+      span.game_session__footer_date {
+        margin-left: 10px;
+        font-size: small;
+        font-style: italic;
+        color: gray;
+      }
+    }
+  }
+}

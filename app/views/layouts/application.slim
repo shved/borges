@@ -4,7 +4,7 @@ html
     title
       | Borges
     = csrf_meta_tags
-    = typekit 'zvx7vex'
+    /= typekit 'zvx7vex'
     = stylesheet_link_tag    'application', media: 'all'
     = javascript_include_tag 'application'
 
@@ -17,7 +17,7 @@ html
       .top_nav_wrapper
         = link_to 'Б', game_sessions_path, class: 'logo'
         = link_to new_author_registration_path, class: 'author_link' do
-          = image_tag 'author.png', size: '30x30', class: 'author_icon'
+          = image_tag 'author.png', size: '44x44', class: 'author_icon'
 
       .left_nav_wrapper
         nav.left_nav

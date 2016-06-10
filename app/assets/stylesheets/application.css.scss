@@ -1,9 +1,10 @@
 /*
+
  *= require_tree .
  *= require_self
  */
 
-// @import url(https://fonts.googleapis.com/css?family=Merriweather:400,300,700,300italic,400italic,700italic&subset=latin,cyrillic-ext,latin-ext,cyrillic);
+@import url(https://fonts.googleapis.com/css?family=Merriweather:400,900,300,300italic,400italic,700&subset=latin,cyrillic);
 
 @font-face {
   font-family: 'websymbolsligaregular';
@@ -22,22 +23,21 @@ body {
     margin: 0 auto;
     max-width: 1200px;
     padding: 0;
-    background: gray;
+    // background: gray;
     .top_nav_wrapper {
-      height: 80px;
-      background: blue;
+      // background: blue;
     }
     .left_nav_wrapper {
       float: left;
       clear: none;
       width: 120px;
-      background: yellow;
+      // background: yellow;
       margin: 0;
     }
     .content_wrapper {
       float: left;
       width: 60%;
-      padding-top: 10px;
+      padding-top: 80px;
     }
     .right_wrapper {
       // background: red;
@@ -53,7 +53,7 @@ body {
   nav.left_nav {
     display: block;
     a.games_link {
-      margin: 130px auto;
+      margin: 98px auto;
       display: block;
       width: 42px;
       height: 42px;
@@ -76,79 +76,36 @@ body {
       width: 24px;
       font-size: 48px;
       color: black;
-      font-family: 'foco';
-      &:hover {
-        border: 2px solid gray;
-        border-radius: px;
-      }
+      font-weight: 700;
+      font-family: 'Merriweather', sans-serif;
+      color: #222;
     }
     a.author_link {
-      margin-top: 20px;
       margin-right: 30px;
       float: right;
       display: block;
-      height: 30px;
-      width: 30px;
-      border: 2px solid black;
-      border-radius: 30px;
-      padding: 10px;
-      &:hover {
-        border: 2px solid gray;
-      }
+      position: relative;
+      bottom: 44px;
       image.author_icon {
         display: block;
-        width: 30px;
-        height: 30px;
+        height: 44px;
+        width: 44px;
       }
     }
   }
 
-  ul.game_sessions {
-    list-style: none;
-    .game_session {
-      a.game_session__name {
-        color: gray;
-        font-size: small;
-        font-style: italic;
-      }
-      p.game_session__body {
-        margin: 10px auto;
-        font-size: medium;
-      }
-      p.game_session__footer {
-        margin-top: 10px;
-        a.game_session__footer_author {
-          font-size: medium;
-        }
-        span.game_session__footer_date {
-          margin-left: 10px;
-          font-size: small;
-          font-style: italic;
-          color: gray;
-        }
-      }
-    }
-  }
-
-  ul.games {
-    list-style: none;
-    li.game {
-      margin: 0 0 30px 0;
-      h3 {
-        margin: 5px 0;
-      }
-      p {
-        margin: 0;
-        font-size: small;
-        color: gray;
-      }
+  .top_nav_wrapper {
+    ul.games:before {
+      background-color: #222;
+      height: 100px;
+      width: auto;
     }
   }
 
   p.caption {
-    font-size: small;
+    font-size: 12px;
     font-style: italic;
-    color: gray;
+    color: #8b97a0;
   }
 
   p.divider {
@@ -157,13 +114,17 @@ body {
     text-align: center;
     vertical-align: center;
     letter-spacing: 10px;
-    font-size: large;
-    font-family: 'ff-more-web-pro', 'Merriweather', Georgia;
+    color: #333;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: 'Merriweather', Georgia;
   }
 
   p, a {
-    font-family: 'ff-more-web-pro', 'Merriweather', Georgia;
-    font-size: 1.2em;
+    // font-family: 'ff-more-web-pro', 'Merriweather', Georgia;
+    font-family: 'Merriweather', Georgia;
+    // font-size: 14px;
+    color: #333;
     line-height: 1.5em;
     font-weight: 300;
   }
@@ -184,11 +145,9 @@ body {
   }
 
   a {
-    color: blue;
+    color: #3f89b8;
     text-decoration: none;
-    &:hover {
-      border-bottom: 1px solid blue;
-    }
+    font-size: 12px;
   }
 
   textarea {

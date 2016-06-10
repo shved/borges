@@ -1,0 +1,27 @@
+ul.games {
+  list-style: none;
+  background: #222;
+  overflow: visible;
+  padding-bottom: 80px;
+  .top-ray {
+    position: absolute;
+    width: 720px;
+    height: 206px;
+    top: 0px;
+    margin-left: -40px;
+    background: #222;
+  }
+  .bottom-ray {
+  }
+  li.game {
+    margin: 0 0 30px 0;
+    h3 {
+      margin: 5px 0;
+    }
+    p {
+      margin: 0;
+      font-size: small;
+      color: gray;
+    }
+  }
+}
