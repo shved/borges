@@ -1,11 +1,10 @@
 doctype html
 html
   head
-    title
-      | Borges
+    title = t('.title')
     = csrf_meta_tags
-    /= typekit 'zvx7vex'
-    = stylesheet_link_tag    'application', media: 'all'
+    = favicon_link_tag 'favicon.png'
+    = stylesheet_link_tag 'application', media: 'all'
     = javascript_include_tag 'application'
 
   body
@@ -15,7 +14,7 @@ html
       p.alert = alert
 
       .top_nav_wrapper
-        = link_to 'Б', game_sessions_path, class: 'logo'
+        = link_to t('.letter'), game_sessions_path, class: 'logo'
         = link_to new_author_registration_path, class: 'author_link' do
           = image_tag 'author.png', size: '44x44', class: 'author_icon'
 
@@ -33,3 +32,5 @@ html
       .footer
         | (c)2016
 
+javascript:
+  window.I18n = #{current_translations.to_json.html_safe}

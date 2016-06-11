@@ -1,5 +1,7 @@
 module ApplicationHelper
-  def current_user
+  def current_translations
+    @translations ||= I18n.backend.send(:translations)
+    @translations[I18n.locale].with_indifferent_access
   end
 
   def session_result_font_size(text_length)
