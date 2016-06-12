@@ -1,4 +1,5 @@
 /*
+ *= require jquery-ui/selectmenu
  *= require_tree .
  *= require_self
  */
@@ -146,6 +147,12 @@ body {
     color: #3f89b8;
     text-decoration: none;
     font-size: 12px;
+  }
+
+  input a span textarea {
+    &:focus {
+      outline: none;
+    }
   }
 
   textarea {

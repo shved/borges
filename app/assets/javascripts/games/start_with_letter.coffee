@@ -1,3 +1,0 @@
-class @StartWithLetter
-  run: (letter) ->
-

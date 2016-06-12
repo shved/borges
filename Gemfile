@@ -13,13 +13,14 @@ gem 'capistrano-rails'
 gem 'slim'
 gem 'devise'
 gem 'typekit-rails'
+gem 'vuejs-rails'
+gem 'jquery-ui-rails'
 
 group :development, :test do
   gem 'byebug', platform: :mri
 end
 
 group :development do
-  gem 'quiet_assets'
   gem 'web-console'
   gem 'listen', '~> 3.0.5'
   gem 'spring'

@@ -4,6 +4,10 @@ module ApplicationHelper
     @translations[I18n.locale].with_indifferent_access
   end
 
+  def game_session_timestamp(created_at)
+    created_at.to_s
+  end
+
   def session_result_font_size(text_length)
     case text_length
     when (0..24) then '48px'

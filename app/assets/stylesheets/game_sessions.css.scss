@@ -1,3 +1,72 @@
+.ui-widget {
+  font-family: 'Merriweather', Georgia;
+}
+
+.new_game {
+  h1.game_name {
+    color: #333;
+    font-family: 'Merriweather', Georgia;
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 36px;
+    select.game_option {
+      width: 64px;
+    }
+    #game_option-button {
+      position: relative;
+      top: 14px;
+      margin: 0 20px;
+      height: 42px;
+      border: 1px solid #c6cfd6;
+      border-radius: 21px;
+      background: white;
+      &:focus {
+        outline: none;
+      }
+      .ui-selectmenu-text {
+          padding: 0;
+          padding-left: 18px;
+          padding-top: 4px;
+          font-family: 'Merriweather', Georgia;
+          font-size: 24px;
+          font-weight: 300;
+          color: #333;
+      }
+    }
+    .random_option {
+      height: 30px;
+      border: 1px solid #c6cfd6;
+      border-radius: 15px;
+      display: inline;
+      color: #333;
+      font-family: 'Merriweather', Georgia;
+      font-size: 10px;
+      line-height: 36px;
+      font-weight: 400;
+      padding: 9px 25px;
+    }
+  }
+}
+
+#game_option-menu {
+  border: 1px solid #c6cfd6;
+  border-top: none;
+  border-bottom-right-radius: 21px;
+  border-bottom-left-radius: 21px;
+  .ui-menu-item {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 300;
+    color: #333;
+  }
+  .ui-state-focus {
+    background: #c6cfd6;
+    border: 1px solid white;
+  }
+}
+
+.overflow { height: 200px; }
+
 ul.game_sessions {
   list-style: none;
   .game_session {
@@ -24,3 +93,4 @@ ul.game_sessions {
     }
   }
 }
+

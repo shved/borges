@@ -1,0 +1,12 @@
+script type='text/x-template' id='#start_with_letter'
+  h1.game_name
+    = @game.name
+    span.game_option = @game.props[:letter]
+  textarea.game_textarea
+    | {{game_session.text}}
+
+- content_for :right_wrapper do
+  = simple_format @game.desc,
+                  class: 'caption',
+                  wrapper_tag: 'p'
+

@@ -1,0 +1,17 @@
+.new_game#start_with_letter
+  h1.game_name
+    = @game.name
+    span
+      = select_tag('game_option', options_for_select(Game::ALPHABET[I18n.locale]), class: 'game_option')
+    .random_option
+      = t('.random_option')
+
+  .game_description
+    = simple_format @game.desc,
+                    class: 'caption',
+                    wrapper_tag: 'p'
+
+- @game_sessions = []
+
+ul.game_sessions
+  = render @game_sessions
