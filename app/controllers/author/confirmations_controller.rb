@@ -1,4 +1,4 @@
-class Writers::ConfirmationsController < Devise::ConfirmationsController
+class Author::ConfirmationsController < Devise::ConfirmationsController
   # GET /resource/confirmation/new
   # def new
   #   super

@@ -35,10 +35,9 @@ body {
     .content_wrapper {
       float: left;
       width: 60%;
-      padding-top: 68px;
     }
     .right_wrapper {
-      padding-top: 38px;
+      padding-top: 56px;
       clear: none;
       float: right;
       width: 300px;
@@ -98,9 +97,10 @@ body {
   }
 
   p.caption {
+    margin: 0;
     font-size: 12px;
-    font-style: italic;
     color: #8b97a0;
+    line-height: 20px;
   }
 
   p.divider {

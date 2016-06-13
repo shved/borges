@@ -4,20 +4,41 @@
 
 .new_game {
   width: 100%;
-  margin-top: 6px;
+  position: relative;
+  top: -30px;
+  textarea.game_textarea {
+    margin-top: 100px;
+    font-family: 'Merriweater', Georgia;
+    font-size: 24px;
+    color: #333;
+    font-weight: 300;
+  }
   h1.game_name {
     display: inline;
     color: #333;
     font-family: 'Merriweather', Georgia;
     font-size: 24px;
     font-weight: 900;
-    line-height: 36px;
+    line-height: 24px;
+    vertical-align: top;
     select.game_option {
       width: 70px;
     }
+    > span.game_option {
+      margin: 0 20px;
+      background-color: #fff600;
+      border-radius: 30px;
+      padding: 10px 16px;
+      font-weight: 300;
+      font-size: 24px;
+      color: #333;
+      line-height: 8px;
+      position: relative;
+      top: 6px;
+    }
     #game_option-button {
       position: relative;
-      top: 14px;
+      bottom: 10px;
       margin: 0 20px;
       height: 42px;
       border: 1px solid #c6cfd6;
@@ -45,15 +66,15 @@
     color: #333;
     font-family: 'Merriweather', Georgia;
     font-size: 10px;
-    line-height: 36px;
     font-weight: 400;
     letter-spacing: 2px;
     padding: 10px 23px 8px 27px;
-    position: relative;
-    bottom: 3px;
     cursor: pointer;
+    position: relative;
+    top: -26px;
   }
   p.game_caption {
+    margin-top: 40px;
     font-size: 14px;
     line-height: 28px;
   }

@@ -1,4 +1,4 @@
-class Writers::UnlocksController < Devise::UnlocksController
+class Author::UnlocksController < Devise::UnlocksController
   # GET /resource/unlock/new
   # def new
   #   super

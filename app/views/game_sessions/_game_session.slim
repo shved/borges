@@ -3,7 +3,7 @@ li.game_session
   p.game_session__body style="#{ session_result_font_size(game_session.body.length) }"
     = game_session.body
   p.game_session__footer
-    = link_to game_session.author.login, game_sessions_path(author: session.author), class: 'game_session__footer_author'
+    = link_to game_session.author.login, game_sessions_path, class: 'game_session__footer_author'
     span.game_session__footer_date
       = game_session_timestamp(game_session.created_at)
 

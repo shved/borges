@@ -4,3 +4,5 @@ en:
       random_option: RANDOM
       start_game: BEGIN TO WRITE
       first_letter: a
+    start_with_letter_new:
+      game_prompt: ["Impress me.", "C'mon fellow.", "Get it on.", "Psst! Lets write something"]

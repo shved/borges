@@ -14,7 +14,6 @@
   = link_to new_game_session_path(game_type: @game_type, props: { letter: Game.alphabet.first }), class: 'new_game__link' do
     = t('.start_game')
 
-
 ul.game_sessions
   = render @game_sessions
 

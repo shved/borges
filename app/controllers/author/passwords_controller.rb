@@ -1,4 +1,4 @@
-class Writers::PasswordsController < Devise::PasswordsController
+class Author::PasswordsController < Devise::PasswordsController
   # GET /resource/password/new
   # def new
   #   super
