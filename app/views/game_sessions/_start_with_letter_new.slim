@@ -1,7 +1,7 @@
 script type='text/x-template' id='#start_with_letter'
   h1.game_name
     = @game.name
-    span.game_option = @game.props[:letter]
+    span.game_option = @game_session.props[:letter]
   textarea.game_textarea
     | {{game_session.text}}
 

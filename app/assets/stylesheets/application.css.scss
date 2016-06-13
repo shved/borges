@@ -24,15 +24,12 @@ body {
     margin: 0 auto;
     max-width: 1200px;
     padding: 0;
-    // background: gray;
     .top_nav_wrapper {
-      // background: blue;
     }
     .left_nav_wrapper {
       float: left;
       clear: none;
       width: 120px;
-      // background: yellow;
       margin: 0;
     }
     .content_wrapper {
@@ -41,13 +38,10 @@ body {
       padding-top: 68px;
     }
     .right_wrapper {
-      // background: red;
+      padding-top: 38px;
       clear: none;
       float: right;
       width: 300px;
-    }
-    .footer {
-      clear: both;
     }
   }
 

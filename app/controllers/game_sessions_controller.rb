@@ -12,7 +12,8 @@ class GameSessionsController < ApplicationController
   def new
     @game_type = params[:game_type]
     @props = params[:props]
-    @game = Game.new(game_type: @game_type, props: @props)
+    @game = Game.send(params[:game_type].to_sym)
+    @game_session = GameSession.new(game: @game, props: @props)
   end
 
   def create
