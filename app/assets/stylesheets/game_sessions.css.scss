@@ -4,13 +4,14 @@
 
 .new_game {
   h1.game_name {
+    display: inline;
     color: #333;
     font-family: 'Merriweather', Georgia;
     font-size: 24px;
     font-weight: 900;
     line-height: 36px;
     select.game_option {
-      width: 64px;
+      width: 70px;
     }
     #game_option-button {
       position: relative;
@@ -33,18 +34,22 @@
           color: #333;
       }
     }
-    .random_option {
-      height: 30px;
-      border: 1px solid #c6cfd6;
-      border-radius: 15px;
-      display: inline;
-      color: #333;
-      font-family: 'Merriweather', Georgia;
-      font-size: 10px;
-      line-height: 36px;
-      font-weight: 400;
-      padding: 9px 25px;
-    }
+  }
+  .random_option {
+    height: 30px;
+    border: 1px solid #c6cfd6;
+    border-radius: 15px;
+    display: inline;
+    color: #333;
+    font-family: 'Merriweather', Georgia;
+    font-size: 10px;
+    line-height: 36px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    padding: 10px 23px 8px 27px;
+    position: relative;
+    bottom: 3px;
+    cursor: pointer;
   }
 }
 
@@ -94,3 +99,10 @@ ul.game_sessions {
   }
 }
 
+.new_game__link {
+  height: 60px;
+  padding: 24px 40px;
+  background: white;
+  border: 1px solid #c6cfd6;
+  border-radius: 5px;
+}

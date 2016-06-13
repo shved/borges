@@ -1,0 +1,20 @@
+.new_game#start_with_letter
+  h1.game_name
+    = @game.name
+    span
+      = select_tag('game_option', options_for_select(Game.alphabet), class: 'game_option')
+  .random_option
+    = t('.random_option')
+
+.game_description
+  = simple_format @game.desc,
+                  class: 'caption',
+                  wrapper_tag: 'p'
+
+= link_to new_game_session_path(game_type: @game_type, props: { letter: Game.alphabet.first }), class: 'new_game__link' do
+  = t('.start_game')
+
+
+ul.game_sessions
+  = render @game_sessions
+

@@ -1,4 +1,6 @@
 en:
   game_sessions:
-    start_with_letter_new:
+    start_with_letter_start:
       random_option: RANDOM
+      start_game: BEGIN
+      first_letter: a

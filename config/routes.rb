@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   root to: "game_sessions#index"
 
   resources :games, only: [:index]
-  resources :game_sessions, only: [:new, :create, :index]
+  resources :game_sessions, only: [:new, :create, :index] do
+    get :start, on: :collection
+  end
   resources :likes, only: [:create]
 end

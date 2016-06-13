@@ -1,4 +1,6 @@
 ru:
   game_sessions:
-    start_with_letter_new:
+    start_with_letter_start:
       random_option: СЛУЧАЙНО
+      start_game: ПИСАТЬ
+      first_letter: а
