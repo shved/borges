@@ -23,18 +23,20 @@ ul.games {
   }
   li.game {
     margin: 0 0 20px 0;
-    h3.game_index_title > a {
-      margin: 20px 0;
-      color: white;
-      font-size: 16px;
-      font-weight: 300;
-      line-height: 16px;
+    h3.game_index_title {
+      margin: 20px 0 10px 0;
+      a.game_title__link {
+        color: white;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 16px;
+      }
     }
     p {
+      margin-top: 10px;
       margin: 0;
       font-size: small;
       color: gray;
-      line-height: 0;
     }
     p.divider {
       margin-top: 40px;

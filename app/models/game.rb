@@ -5,6 +5,8 @@ class Game < ApplicationRecord
 
   translates :name, :desc
 
+  scope :ordered, -> { order(position: :asc) }
+
   TYPES = [:start_with_letter, :avoid_letter, :wrap_word].freeze
 
   ALPHABET = {

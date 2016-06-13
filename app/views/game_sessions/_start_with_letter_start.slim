@@ -6,13 +6,13 @@
   .random_option
     = t('.random_option')
 
-.game_description
-  = simple_format @game.desc,
-                  class: 'caption',
-                  wrapper_tag: 'p'
+  .game_description
+    = simple_format @game.desc,
+                    class: 'game_caption caption',
+                    wrapper_tag: 'p'
 
-= link_to new_game_session_path(game_type: @game_type, props: { letter: Game.alphabet.first }), class: 'new_game__link' do
-  = t('.start_game')
+  = link_to new_game_session_path(game_type: @game_type, props: { letter: Game.alphabet.first }), class: 'new_game__link' do
+    = t('.start_game')
 
 
 ul.game_sessions

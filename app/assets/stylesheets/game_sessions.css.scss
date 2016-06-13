@@ -3,6 +3,8 @@
 }
 
 .new_game {
+  width: 100%;
+  margin-top: 6px;
   h1.game_name {
     display: inline;
     color: #333;
@@ -50,6 +52,22 @@
     position: relative;
     bottom: 3px;
     cursor: pointer;
+  }
+  p.game_caption {
+    font-size: 14px;
+    line-height: 28px;
+  }
+  .new_game__link {
+    margin: 20px auto;
+    padding: 24px 20px;
+    background: white;
+    border: 1px solid #c6cfd6;
+    border-radius: 5px;
+    .ui-button-text {
+      font-size: 13px;
+      line-height: 0;
+      letter-spacing: 3px;
+    }
   }
 }
 
@@ -99,10 +117,3 @@ ul.game_sessions {
   }
 }
 
-.new_game__link {
-  height: 60px;
-  padding: 24px 40px;
-  background: white;
-  border: 1px solid #c6cfd6;
-  border-radius: 5px;
-}

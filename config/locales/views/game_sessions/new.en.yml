@@ -2,5 +2,5 @@ en:
   game_sessions:
     start_with_letter_start:
       random_option: RANDOM
-      start_game: BEGIN
+      start_game: BEGIN TO WRITE
       first_letter: a

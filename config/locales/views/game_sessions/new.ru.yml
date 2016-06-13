@@ -2,5 +2,5 @@ ru:
   game_sessions:
     start_with_letter_start:
       random_option: СЛУЧАЙНО
-      start_game: ПИСАТЬ
+      start_game: НАЧАТЬ ПИСАТЬ
       first_letter: а

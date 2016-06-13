@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160530091607) do
+ActiveRecord::Schema.define(version: 20160613155634) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -43,12 +43,14 @@ ActiveRecord::Schema.define(version: 20160530091607) do
   end
 
   create_table "games", force: :cascade do |t|
-    t.string "name_ru"
-    t.string "name_en"
-    t.jsonb  "props"
-    t.string "game_type"
-    t.text   "desc_ru"
-    t.text   "desc_en"
+    t.string  "name_ru"
+    t.string  "name_en"
+    t.jsonb   "props"
+    t.string  "game_type"
+    t.text    "desc_ru"
+    t.text    "desc_en"
+    t.integer "position",  default: 0, null: false
+    t.index ["position"], name: "index_games_on_position", using: :btree
   end
 
   create_table "likes", force: :cascade do |t|
