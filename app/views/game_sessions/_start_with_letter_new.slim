@@ -1,19 +1,7 @@
-script type='text/x-template' id='#start_with_letter'
-  new Vue({
-    el: '#start_with_letter',
-    data: {
-      text: ''
-    },
-    ready: console.log('ready'),
-    methods: {
-      validateInput: function(char) {
-        return false if char.charCodeAt(0) == 65;
-        return true;
-      }}});
-
 .new_game#start_with_letter
   h1.game_name
     = @game.name
-    span.game_option
+    span.game_option v-model='game_session.letter'
       = @game_session.props[:letter]
   textarea.game_textarea v-model='text' value=(@game_session.body) placeholder=(t('.game_prompt').sample)
+

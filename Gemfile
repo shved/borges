@@ -13,7 +13,6 @@ gem 'capistrano-rails'
 gem 'slim'
 gem 'devise'
 gem 'typekit-rails'
-gem 'vuejs-rails'
 gem 'jquery-ui-rails'
 
 group :development, :test do
