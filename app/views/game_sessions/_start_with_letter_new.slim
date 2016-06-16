@@ -1,6 +1,5 @@
 = react_component('StartWithLetter',
   letter: @game_session.props[:letter],
   gameName: @game.name,
-  text: @game_session.text || '',
   gamePrompt: t('.game_prompt').sample,
   timeout: @timeout || 5.seconds)
