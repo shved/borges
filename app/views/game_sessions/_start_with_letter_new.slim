@@ -1,7 +1,6 @@
-.new_game#start_with_letter
-  h1.game_name
-    = @game.name
-    span.game_option v-model='game_session.letter'
-      = @game_session.props[:letter]
-  textarea.game_textarea v-model='text' value=(@game_session.body) placeholder=(t('.game_prompt').sample)
-
+= react_component('StartWithLetter',
+  letter: @game_session.props[:letter],
+  gameName: @game.name,
+  text: @game_session.text || '',
+  gamePrompt: t('.game_prompt').sample,
+  timeout: @timeout || 5.seconds)

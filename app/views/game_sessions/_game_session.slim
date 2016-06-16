@@ -1,7 +1,7 @@
 li.game_session
   = link_to game_session.game.name, game_sessions_path, class: 'game_session__name'
-  p.game_session__body style="#{ session_result_font_size(game_session.body.length) }"
-    = game_session.body
+  p.game_session__text style="#{ session_result_font_size(game_session.text.length) }"
+    = game_session.text
   p.game_session__footer
     = link_to game_session.author.login, game_sessions_path, class: 'game_session__footer_author'
     span.game_session__footer_date
