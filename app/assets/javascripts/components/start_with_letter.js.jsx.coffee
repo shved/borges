@@ -9,8 +9,23 @@
     text: ''
 
   validateInput: (event) ->
-    all_text = this.state.text
-    this.setState(text: event.target.value)
+    if event.target.value.split(/ |,|\.|-|—|:|;|”|‘|“|’|»|«/).length > 3
+      text = event.target.value
+      words = text.split(/ |,|\.|-|—|:|;|”|‘|“|’|»|«/)
+      letter = this.props.letter
+      stop_words = words.filter (word) ->
+        word.charAt(0) != letter || word.charAt(0) != letter.toUpperCase()
+
+      new_text = text
+      stop_words.forEach( (word, index) ->
+        new_text = new_text.replace(word, '')
+      )
+      new_text = new_text.trim()
+      # new_text = (text.replace(word, '') for word in words).join(' ')
+    else
+      new_text = event.target.value
+
+    this.setState(text: new_text)
 
   render: ->
     `<div className='new_game' id='start_with_letter'>
