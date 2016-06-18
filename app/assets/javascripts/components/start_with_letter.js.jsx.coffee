@@ -14,14 +14,15 @@
       words = text.split(/ |,|\.|-|—|:|;|”|‘|“|’|»|«/)
       letter = this.props.letter
       stop_words = words.filter (word) ->
-        word.charAt(0) != letter || word.charAt(0) != letter.toUpperCase()
+        word.charAt(0) != letter
+      stop_words = stop_words.filter (word) ->
+        word.charAt(0) != letter.toUpperCase()
 
       new_text = text
       stop_words.forEach( (word, index) ->
         new_text = new_text.replace(word, '')
       )
-      new_text = new_text.trim()
-      # new_text = (text.replace(word, '') for word in words).join(' ')
+      new_text = new_text
     else
       new_text = event.target.value
 

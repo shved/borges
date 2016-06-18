@@ -1,5 +1,6 @@
 $ ->
   if $('#start_with_letter').length > 0
+    # start
     $('select.game_option').selectmenu({
       select: (event, ui) ->
         $('#game_option-button').css({
@@ -36,4 +37,6 @@ $ ->
       $('select.game_option').selectmenu('refresh').trigger('select')
     )
 
+    # new
+    $('.game_textarea').elastic()
 
