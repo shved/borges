@@ -9,18 +9,23 @@
     text: ''
 
   validateInput: (event) ->
-    if event.target.value.split(/ |,|\.|-|—|:|;|”|‘|“|’|»|«/).length > 3
+    if event.target.value.split(/ |,|\.|-|—|:|;|”|‘|“|’|»|«/).length > 2
       text = event.target.value
       words = text.split(/ |,|\.|-|—|:|;|”|‘|“|’|»|«/)
       letter = this.props.letter
       stop_words = words.filter (word) ->
-        word.charAt(0) != letter
+        word.startsWith(letter)
       stop_words = stop_words.filter (word) ->
-        word.charAt(0) != letter.toUpperCase()
+        word.startsWith(letter.toUpperCase())
+
+      # if stop_words.length > 0
+      #   $('.game_option').animate(
+      #     backgroundColor: 'red'
+      #   )
 
       new_text = text
       stop_words.forEach( (word, index) ->
-        new_text = new_text.replace(word, '')
+        new_text = new_text.replace(/[ -—‘“«]word[ ,.-:;”’»]/, '')
       )
       new_text = new_text
     else
