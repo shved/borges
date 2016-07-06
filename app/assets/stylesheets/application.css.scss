@@ -41,6 +41,7 @@ body {
       clear: none;
       float: right;
       width: 300px;
+
     }
   }
 
@@ -165,5 +166,18 @@ body {
     position: fixed;
     bottom: 20px;
     left: 20px;
+  }
+
+  .small_button {
+    height: 30px;
+    border: 1px solid #c6cfd6;
+    border-radius: 15px;
+    color: #333;
+    font-family: 'Merriweather', Georgia;
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    padding: 10px 23px 8px 27px;
+    cursor: pointer;
   }
 }

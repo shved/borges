@@ -3,3 +3,5 @@ en:
     application:
       title: Borges
       letter: B
+      suggest_title: "I have no idea what to write about"
+      suggest_button: Suggest a theme

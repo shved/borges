@@ -3,3 +3,5 @@ ru:
     application:
       title: Борхес
       letter: Б
+      suggest_title: "Чего бы такого написать?"
+      suggest_button: Подскажите мне

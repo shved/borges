@@ -3,7 +3,7 @@
     = @game.name
     span
       = select_tag('game_option', options_for_select(Game.alphabet), class: 'game_option')
-  .random_option
+  .random_option.small_button
     = t('.random_option')
 
   .game_description
