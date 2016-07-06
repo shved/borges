@@ -8,30 +8,23 @@
   getInitialState: ->
     text: ''
 
-  validateInput: (event) ->
-    if event.target.value.split(/ |,|\.|-|—|:|;|”|‘|“|’|»|«/).length > 2
-      text = event.target.value
-      words = text.split(/ |,|\.|-|—|:|;|”|‘|“|’|»|«/)
-      letter = this.props.letter
-      stop_words = words.filter (word) ->
-        word.startsWith(letter)
-      stop_words = stop_words.filter (word) ->
-        word.startsWith(letter.toUpperCase())
+  validateInput: (e) ->
+    text = e.target.value
+    char = text.slice(-1)
+    # for the first text symbol
+    if text.length < 2 && text[0].match(///[^#{@props.letter}|#{@props.letter.toUpperCase()}|—|-|(|{|@|'|"|‘|“|«]///)
+      text = ''
+    # the symbol is another letter
+    if !char.match(///[#{@props.letter}|#{@props.letter.toUpperCase()}|-|—|(|{|@|'|"|‘|“|«]///)
+      # the symbol before the last one is a symbol to start a new word
+      if text.length > 1 && text.slice(-2, -1).match(/[ |-|—|(|{|@|'|"|‘|“|«]/)
+        if char != ' ' # to allow spaces after a dash and onther non character symbols
+          text = text.slice(0, -1)
+    new_text = text.replace(/[^а-яё-—(){}@'"‘“« ,.:;”’»]/i, '')
+    @setState text: new_text
 
-      # if stop_words.length > 0
-      #   $('.game_option').animate(
-      #     backgroundColor: 'red'
-      #   )
-
-      new_text = text
-      stop_words.forEach( (word, index) ->
-        new_text = new_text.replace(/[ -—‘“«]word[ ,.-:;”’»]/, '')
-      )
-      new_text = new_text
-    else
-      new_text = event.target.value
-
-    this.setState(text: new_text)
+  preventPaste: (e) ->
+    e.preventDefault()
 
   render: ->
     `<div className='new_game' id='start_with_letter'>
@@ -41,7 +34,11 @@
           {this.props.letter}
         </span>
       </h1>
-      <textarea className='game_textarea' value={this.state.text} placeholder={this.props.gamePrompt} onChange={this.validateInput}>
+      <textarea className='game_textarea'
+        value={this.state.text}
+        placeholder={this.props.gamePrompt}
+        onPaste={this.preventPaste}
+        onChange={this.validateInput}>
       </textarea>
     </div>`
 
