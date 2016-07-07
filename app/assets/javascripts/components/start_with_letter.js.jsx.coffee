@@ -9,6 +9,7 @@
     text: ''
 
   validateInput: (e) ->
+    # TODO вынести этот хлам в какой нибудь компонент отдельно
     text = e.target.value
     char = text.slice(-1)
     # for the first text symbol
@@ -22,7 +23,7 @@
         if char != ' ' # to allow spaces after a dash and onther non character symbols
           @warning()
           text = text.slice(0, -1)
-    new_text = text.replace(/[^а-яё-—(){}@'"‘“« ,.:;”’»]/i, '')
+    new_text = text.replace(/[^а-яё-—(){}@'"‘“« ,.:;”’»?!#$%*+]/i, '')
     @setState text: new_text
 
   preventPaste: (e) ->
