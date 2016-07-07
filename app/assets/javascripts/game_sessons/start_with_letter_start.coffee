@@ -13,6 +13,10 @@ $ ->
     }).selectmenu('menuWidget').addClass('overflow')
 
     $('.new_game__link').button()
+    $('.suggest_button').button()
+
+    $('.suggest_button').on('click', ->
+      alert('lol')
 
     $('#game_option-button').on('click', ->
       if $(this).attr('aria-expanded') == 'true'

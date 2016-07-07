@@ -51,3 +51,24 @@ ul.games {
     }
   }
 }
+
+.right_wrapper__theme_suggestion {
+  margin-top: -50px;
+  h3 {
+    color: #222;
+    font-style: italic;
+    margin: 10px;
+  }
+  a.suggest_button {
+    margin: 10px 10px;
+    padding: 14px 12px;
+    background: white;
+    border: 1px solid #c6cfd6;
+    border-radius: 5px;
+    .ui-button-text {
+      font-size: 12px;
+      line-height: 0;
+      letter-spacing: 3px;
+    }
+  }
+}

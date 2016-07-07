@@ -17,3 +17,9 @@
 ul.game_sessions
   = render @game_sessions
 
+- content_for :right_wrapper do
+  .right_wrapper__theme_suggestion
+    h3 = t('.suggest_title')
+    a.suggest_button rel="#"
+      = t('.suggest_button')
+

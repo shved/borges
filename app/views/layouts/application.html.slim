@@ -26,12 +26,7 @@ html
         = yield
 
       .right_wrapper
-        .right_wrapper__caption
-          = yield :right_wrapper
-        .right_wrapper__theme_suggestion
-          h3 = t('.suggest_title')
-          .small_button
-            = t('.suggest_button')
+        = yield :right_wrapper
 
 
     = javascript_include_tag 'application'

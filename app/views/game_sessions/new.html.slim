@@ -2,7 +2,8 @@ div id=(@game_type)
 = render partial: "#{@game_type}_new"
 
 - content_for :right_wrapper do
-  = simple_format @game.desc,
-                  class: 'caption',
-                  wrapper_tag: 'p'
+  .right_wrapper__caption
+    = simple_format @game.desc,
+                    class: 'caption',
+                    wrapper_tag: 'p'
 
