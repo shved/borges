@@ -11,4 +11,8 @@ Rails.application.routes.draw do
     get :start, on: :collection
   end
   resources :likes, only: [:create]
+
+  namespace :api do
+    get 'suggest' => 'theme_suggestions#suggest'
+  end
 end

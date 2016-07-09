@@ -4,4 +4,11 @@ class ThemeSuggestion < ApplicationRecord
   end
 
   translates :text
+
+  def to_json
+    {
+      'id': self.id,
+      'text': self.text
+    }.to_json
+  end
 end

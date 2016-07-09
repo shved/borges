@@ -9,7 +9,6 @@
     text: ''
 
   validateInput: (e) ->
-    # TODO вынести этот хлам в какой нибудь компонент отдельно
     text = e.target.value
     char = text.slice(-1)
     # for the first text symbol
@@ -20,7 +19,7 @@
     if !char.match(///[#{@props.letter}|#{@props.letter.toUpperCase()}|-|—|(|{|@|'|"|‘|“|«]///)
       # the symbol before the last one is a symbol to start a new word
       if text.length > 1 && text.slice(-2, -1).match(/[ |-|—|(|{|@|'|"|‘|“|«]/)
-        if char != ' ' # to allow spaces after a dash and onther non character symbols
+        if char != ' ' # to allow spaces after a dash and other non character symbols
           @warning()
           text = text.slice(0, -1)
     new_text = text.replace(/[^а-яё-—(){}@'"‘“« ,.:;”’»?!#$%*+]/i, '')
@@ -34,10 +33,7 @@
     $('.game_option').stop().animate({ backgroundColor: 'red' }, duration: 100, complete: ->
       $(this).animate({ backgroundColor: '#fff600' }, duration: 100, complete: ->
         $(this).animate({ backgroundColor: 'red' }, duration: 100, complete: ->
-          $(this).animate({ backgroundColor: '#fff600' }, duration: 100)
-        )
-      )
-    )
+          $(this).animate({ backgroundColor: '#fff600' }, duration: 100))))
 
   render: ->
     `<div className='new_game' id='start_with_letter'>
