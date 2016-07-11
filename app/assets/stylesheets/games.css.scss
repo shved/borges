@@ -53,18 +53,24 @@ ul.games {
 }
 
 .right_wrapper__theme_suggestion {
-  margin-top: -60px;
+  margin-top: -45px;
   h3 {
     color: #222;
     font-style: italic;
-    margin: 20px 0;
+    margin: 0 0 20px 0;
   }
   a.suggest_button {
-    margin: 10px;
+    margin: 10px 0;
     .ui-button-text {
       font-size: 12px;
       line-height: 0;
       letter-spacing: 3px;
     }
+  }
+  p.suggestion {
+   margin: 20px 0;
+   font-size: 14px;
+   line-height: 20px;
+   color: gray;
   }
 }

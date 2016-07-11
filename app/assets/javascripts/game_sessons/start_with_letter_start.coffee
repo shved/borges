@@ -19,7 +19,6 @@ $ ->
         type: 'GET'
         url: '/api/suggest'
         success: (response) ->
-          console.log(response)
           $('p.suggestion').text(response.text)
         error: (response) ->
           console.log(response, arguments)

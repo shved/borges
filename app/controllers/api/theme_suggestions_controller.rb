@@ -1,7 +1,8 @@
 module Api
   class ThemeSuggestionsController < ApplicationController
     def suggest
-      @suggestion = ThemeSuggestion.all.sample
+      limit = ThemeSuggestion.count + 1
+      @suggestion = ThemeSuggestion.find(limit)
       render json: @suggestion.to_json
     end
   end
