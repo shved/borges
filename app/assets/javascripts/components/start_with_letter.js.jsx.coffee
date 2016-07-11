@@ -24,6 +24,11 @@
           text = text.slice(0, -1)
     new_text = text.replace(/[^а-яё-—(){}@'"‘“« ,.:;”’»?!#$%*+]/i, '')
     @setState text: new_text
+    clearTimeout saveTimeout
+    saveTimeout = setTimeout @saveResult, 10000
+
+  saveResult: ->
+    alert('saved')
 
   preventPaste: (e) ->
     @warning()
