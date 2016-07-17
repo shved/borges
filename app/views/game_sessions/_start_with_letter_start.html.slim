@@ -15,6 +15,8 @@
     = t('.start_game')
 
 ul.game_sessions
+  h2.games_title
+    | Последние результаты
   = render @game_sessions
 
 - content_for :right_wrapper do

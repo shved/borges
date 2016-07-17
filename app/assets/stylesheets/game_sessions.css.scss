@@ -70,7 +70,7 @@
     line-height: 28px;
   }
   .new_game__link {
-    margin: 20px auto;
+    margin: 40px 0 0 250px;
     padding: 24px 20px;
     background: white;
     border: 1px solid #c6cfd6;
@@ -104,6 +104,12 @@
 
 ul.game_sessions {
   list-style: none;
+  h2.games_title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+    font-family: 'Merriweather', Georgia;
+  }
   .game_session {
     a.game_session__name {
       color: #8b97a0;
@@ -125,6 +131,37 @@ ul.game_sessions {
         font-style: italic;
         color: gray;
       }
+    }
+  }
+}
+
+.complete_session_buttons {
+  padding: 10px auto;
+  .complete_session_buttons__span {
+    margin: 50px auto;
+    display: block;
+    .save_session {
+      color: #333;
+      padding: 24px 20px;
+      margin: 10px auto;
+      margin-left: 230px;
+      background: white;
+      border: 1px solid #c6cfd6;
+      border-radius: 5px;
+      font-size: 13px;
+      letter-spacing: 3px;
+      line-height: 0;
+      font-weight: 300;
+      font-family: 'Merriweather', Georgia;
+      .ui-button-text {
+        font-size: 13px;
+        line-height: 0;
+        letter-spacing: 3px;
+      }
+    }
+    .small_button {
+      margin: 10px auto;
+      margin-left: 277px;
     }
   }
 }

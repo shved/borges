@@ -13,7 +13,7 @@
     1000
 
   completeTimeoutAmount: ->
-    5000
+    3000
 
   warningIntervalAmount: ->
     500
@@ -73,7 +73,14 @@
 
   completeButton: ->
     if @state.session == 'complete'
-      `<a className='small_button' href='#'>НАЧАТЬ ЗАНОВО</a>`
+      `<div className="complete_session_buttons">
+        <span className="complete_session_buttons__span">
+          <a className='save_session' href='#'>СОХРАНИТЬ РЕЗУЛЬТАТ</a>
+        </span>
+        <span className="complete_session_buttons__span">
+          <a className='small_button' href='#'>НАЧАТЬ ЗАНОВО</a>
+        </span>
+      </div>`
 
   render: ->
     `<div className='new_game' id='start_with_letter'>
