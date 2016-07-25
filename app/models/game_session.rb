@@ -2,10 +2,10 @@ class GameSession < ApplicationRecord
   belongs_to :game
   belongs_to :author
 
-  validates :body, presence: true
+  validates :text, presence: true
 
   def props
-    read_attribute(:props).with_indifferent_access
+    JSON.parse(read_attribute(:props)).with_indifferent_access
   end
 
   def text

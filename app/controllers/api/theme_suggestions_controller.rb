@@ -1,8 +1,7 @@
 module Api
   class ThemeSuggestionsController < ApplicationController
     def suggest
-      random_id = ThemeSuggestion.select(:id).order('RANDOM()').limit(1).first.id
-      @suggestion = ThemeSuggestion.find(random_id)
+      @suggestion = ThemeSuggestion.order('RANDOM()').limit(1)
       render json: @suggestion.to_json
     end
   end

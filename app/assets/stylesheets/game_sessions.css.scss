@@ -138,11 +138,13 @@ ul.game_sessions {
 .complete_session_buttons {
   padding: 10px auto;
   .complete_session_buttons__span {
-    margin: 50px auto;
+    margin: 20px auto;
     display: block;
-    .save_session {
+    .submit_session {
+      height: 50px;
+      cursor: pointer;
       color: #333;
-      padding: 24px 20px;
+      padding: 26px 20px;
       margin: 10px auto;
       margin-left: 230px;
       background: white;
@@ -159,7 +161,9 @@ ul.game_sessions {
         letter-spacing: 3px;
       }
     }
-    .small_button {
+    .restart_session {
+      background-color: white;
+      height: auto;
       margin: 10px auto;
       margin-left: 277px;
     }

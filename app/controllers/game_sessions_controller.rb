@@ -1,12 +1,12 @@
 class GameSessionsController < ApplicationController
   def index
-    render :index
+    @game_sessions = GameSession.order(created_at: :desc).take(10)
   end
 
   def start
     @game_type = params[:game_type]
     @game = Game.find_by(game_type: @game_type)
-    @game_sessions = GameSession.all.limit(25)
+    @game_sessions = GameSession.limit(25)
   end
 
   def new
@@ -17,6 +17,22 @@ class GameSessionsController < ApplicationController
   end
 
   def create
+    # @author.game_sessions.create(...)
+    # redirect_to :index, author: @author
+    @author = Author.last
+    @game_session = @author.game_sessions.new(game_session_params)
+    if @game_session.save!
+      flash[:notice] = 'saved successfully!'
+      render :index
+    else
+      flash[:warning] = @game_session.errors.full_messages.first
+      render :index
+    end
+  end
 
+  private
+
+  def game_session_params
+    params.require(:game_session).permit(:text, :game_id, :props)
   end
 end
