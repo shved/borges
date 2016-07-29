@@ -4,9 +4,7 @@ class GameSession < ApplicationRecord
 
   validates :text, presence: true
 
-  def props
-    JSON.parse(read_attribute(:props)).with_indifferent_access
-  end
+  serialize :props
 
   def text
     clean_text read_attribute(:text)

@@ -71,9 +71,11 @@
       url: '/game_sessions'
       data: data
       success: (response) ->
-        console.log('lol')
+        console.log(response)
+        window.location = response.redirect_path
       error: (response) ->
-        console.log('fail')
+        console.log(response)
+        window.location = response.redirect_path
 
   restartSession: (e) ->
     location.reload()

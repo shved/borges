@@ -23,10 +23,10 @@ class GameSessionsController < ApplicationController
     @game_session = @author.game_sessions.new(game_session_params)
     if @game_session.save!
       flash[:notice] = 'saved successfully!'
-      render :index
+      render json: { redirect_path: game_sessions_path }
     else
       flash[:warning] = @game_session.errors.full_messages.first
-      render :index
+      render json: { redirect_path: game_sessions_path }
     end
   end
 
