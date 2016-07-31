@@ -15,10 +15,15 @@ $ ->
     $('.new_game__link').button()
 
     $('.suggest_button').on('click', ->
+      data =
+        game_type: $('.new_game').data('gameType')
+        suggestion_id: $('p.suggestion').data('suggestionId')
       $.ajax
         type: 'GET'
         url: '/api/suggest'
+        data: data
         success: (response) ->
+          $('p.suggestion').data('suggestionId', response.id)
           $('p.suggestion').text(response.text)
         error: (response) ->
           console.log(response, arguments)

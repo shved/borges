@@ -9,6 +9,9 @@
     text: ''
     session: 'active'
 
+  componentDidMount: ->
+    $('.game_textarea').focus()
+
   gapTimeoutAmount: ->
     1000
 
