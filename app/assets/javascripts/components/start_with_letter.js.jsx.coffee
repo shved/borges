@@ -4,6 +4,7 @@
     gameName: React.PropTypes.string
     gamePrompt: React.PropTypes.string
     gameId: React.PropTypes.number
+    authorSignedIn: React.PropTypes.boolean
 
   getInitialState: ->
     text: ''
@@ -64,6 +65,9 @@
     clearTimeout @completeTimeout
     @setState session: 'complete'
 
+  signInToSubmitSession: (e) ->
+    console.log('ololo')
+
   submitSession: (e) ->
     data =
       game_session:
@@ -98,16 +102,29 @@
         $(this).animate({ backgroundColor: 'white' }, duration: 100, complete: ->
           $(this).animate({ backgroundColor: '#fff600' }, duration: 100))))
 
+  # complete session buttons
+
+  restartSessionButton: ->
+    `<span className='complete_session_buttons__span'>
+      <button className='small_button restart_session' onClick={this.restartSession}>НАЧАТЬ ЗАНОВО</button>
+    </span>`
+
   completeButtons: ->
     if @state.session == 'complete'
-      `<div className='complete_session_buttons'>
-        <span className='complete_session_buttons__span'>
-          <button className='submit_session' onClick={this.submitSession}>СОХРАНИТЬ РЕЗУЛЬТАТ</button>
-        </span>
-        <span className='complete_session_buttons__span'>
-          <button className='small_button restart_session' onClick={this.restartSession}>НАЧАТЬ ЗАНОВО</button>
-        </span>
-      </div>`
+      if @props.authorSignedIn
+        `<div className='complete_session_buttons'>
+          <span className='complete_session_buttons__span'>
+            <button className='submit_session' onClick={this.submitSession}>СОХРАНИТЬ РЕЗУЛЬТАТ</button>
+          </span>
+          {this.restartSessionButton()}
+        </div>`
+      else
+        `<div className='complete_session_buttons'>
+          <span className='complete_session_buttons__span'>
+            <button className='sign_in_to_submit_session' onClick={this.signInToSubmitSession}>АВТОРИЗУЙТЕСЬ, ЧТОБЫ СОХРАНИТЬ РЕЗУЛЬТАТ</button>
+          </span>
+          {this.restartSessionButton()}
+        </div>`
 
   render: ->
     if @state.session == 'complete'

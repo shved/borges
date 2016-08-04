@@ -2,4 +2,5 @@
   letter: @game_session.props[:letter],
   gameName: @game.name,
   gamePrompt: t('.game_prompt').sample,
-  gameId: @game.id)
+  gameId: @game.id,
+  authorSignedIn: current_author.present?)

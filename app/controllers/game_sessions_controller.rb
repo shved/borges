@@ -1,4 +1,6 @@
 class GameSessionsController < ApplicationController
+  before_action :authenticate_user!, only: [:create]
+
   def index
     @game_sessions = GameSession.order(created_at: :desc).take(10)
   end
@@ -17,8 +19,6 @@ class GameSessionsController < ApplicationController
   end
 
   def create
-    # @author.game_sessions.create(...)
-    # redirect_to :index, author: @author
     @author = Author.last
     @game_session = @author.game_sessions.new(game_session_params)
     if @game_session.save!
