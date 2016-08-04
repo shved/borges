@@ -10,6 +10,7 @@
     session: 'active'
 
   componentDidMount: ->
+    $('.game_textarea').elastic()
     $('.game_textarea').focus()
 
   gapTimeoutAmount: ->
@@ -33,17 +34,17 @@
     text = e.target.value
     char = text.slice(-1)
     # for the first text symbol
-    if text.length < 2 && text[0].match(///[^#{@props.letter}|#{@props.letter.toUpperCase()}|—|-|(|{|@|'|"|‘|“|«]///)
+    if text.length < 2 && text[0].match(///[^#{@props.letter}|#{@props.letter.toUpperCase()}|—|\-|(|{|@|'|"|‘|“|«|\\n]///)
       @abuse()
       text = ''
     # the symbol is another letter
-    if !char.match(///[#{@props.letter}|#{@props.letter.toUpperCase()}|-|—|(|{|@|'|"|‘|“|«]///)
+    if !char.match(///[#{@props.letter}|#{@props.letter.toUpperCase()}|\-|—|(|{|@|'|"|‘|“|«|\\n]///)
       # the symbol before the last one is a symbol to start a new word
-      if text.length > 1 && text.slice(-2, -1).match(/[ |-|—|(|{|@|'|"|‘|“|«]/)
-        if char != ' ' # to allow spaces after a dash and other non character symbols
+      if text.length > 1 && text.slice(-2, -1).match(/[ |\-|—|(|{|@|'|"|‘|“|«|\\n]/)
+        if !char.match(/\s/) # to allow spaces after a dash and other non character symbols
           @abuse()
           text = text.slice(0, -1)
-    new_text = text.replace(/[^а-яё-—(){}@'"‘“« ,.:;”’»?!#$%*+]/i, '')
+    new_text = text.replace(/[^-а-яё—(){}@'"‘“« ,.:;”’»?!#$%*+]/gi, '')
     unless new_text.length < 1
       @gapTimeout = setTimeout @gap, @gapTimeoutAmount()
       @setState text: new_text

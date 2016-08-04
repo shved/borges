@@ -3,16 +3,7 @@ class GameSession < ApplicationRecord
   belongs_to :author
 
   validates :text, presence: true
+  validates :text, length: { maximum: 50_000 }
 
   serialize :props
-
-  def text
-    clean_text read_attribute(:text)
-  end
-
-  private
-
-  def clean_text(raw_text)
-    raw_text.to_s
-  end
 end
