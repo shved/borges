@@ -14,8 +14,13 @@ html
 
       .top_nav_wrapper
         = link_to t('.letter'), game_sessions_path, class: 'logo'
-        = link_to new_author_registration_path, class: 'author_link' do
-          = image_tag 'author.png', size: '44x44', class: 'author_icon'
+        - if current_author
+          = link_to game_sessions_path(author: current_author), class: 'author_link' do
+            p = current_author.login
+            = image_tag 'author.png', size: '44x44', class: 'author_icon'
+        - else
+          = link_to new_author_registration_path, class: 'author_link' do
+            = image_tag 'author.png', size: '44x44', class: 'author_icon'
 
       .left_nav_wrapper
         nav.left_nav

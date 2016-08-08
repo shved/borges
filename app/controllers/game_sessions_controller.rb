@@ -2,7 +2,10 @@ class GameSessionsController < ApplicationController
   before_action :authenticate_user!, only: [:create]
 
   def index
-    @game_sessions = GameSession.order(created_at: :desc).take(10)
+    @game_sessions = GameSession.order(created_at: :desc)
+    @game_sessions = @game_sessions.where(author_id: params[:author_id]) if params[:author_id]
+    @game_sessions = @game_sessions.where(game: params[:game_id]) if params[:game_id]
+    @game_sessions = @game_sessions.take(10)
   end
 
   def start

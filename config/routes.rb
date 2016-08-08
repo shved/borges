@@ -14,5 +14,6 @@ Rails.application.routes.draw do
 
   namespace :api do
     get 'suggest' => 'theme_suggestions#suggest'
+    resources :pending_game_sessions, only: :create
   end
 end

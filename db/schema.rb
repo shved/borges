@@ -1,4 +1,3 @@
-# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -11,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160615220539) do
+ActiveRecord::Schema.define(version: 20160805224927) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -63,6 +62,16 @@ ActiveRecord::Schema.define(version: 20160615220539) do
     t.index ["game_session_id"], name: "index_likes_on_game_session_id", using: :btree
   end
 
+  create_table "pending_game_sessions", force: :cascade do |t|
+    t.integer  "game_id"
+    t.text     "text"
+    t.jsonb    "props"
+    t.string   "hex"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["game_id"], name: "index_pending_game_sessions_on_game_id", using: :btree
+  end
+
   create_table "theme_suggestions", force: :cascade do |t|
     t.text  "text_ru"
     t.text  "text_en"
@@ -73,4 +82,5 @@ ActiveRecord::Schema.define(version: 20160615220539) do
   add_foreign_key "game_sessions", "games"
   add_foreign_key "likes", "authors"
   add_foreign_key "likes", "game_sessions"
+  add_foreign_key "pending_game_sessions", "games"
 end

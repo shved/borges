@@ -4,7 +4,7 @@
     gameName: React.PropTypes.string
     gamePrompt: React.PropTypes.string
     gameId: React.PropTypes.number
-    authorSignedIn: React.PropTypes.boolean
+    authorSignedIn: React.PropTypes.bool
 
   getInitialState: ->
     text: ''
@@ -66,7 +66,19 @@
     @setState session: 'complete'
 
   signInToSubmitSession: (e) ->
-    console.log('ololo')
+    data =
+      pending_game_session:
+        text: $('textarea.game_textarea').val()
+        game_id: @props.gameId
+        props: JSON.stringify({ letter: @props.letter })
+    $.ajax
+      type: 'POST'
+      url: '/api/pending_game_sessions'
+      data: data
+      success: (response) ->
+        window.location = response.redirect_path + '?hex=' + response.hex
+      error: (response) ->
+        alert('pending game session not created')
 
   submitSession: (e) ->
     data =
@@ -79,10 +91,8 @@
       url: '/game_sessions'
       data: data
       success: (response) ->
-        console.log(response)
         window.location = response.redirect_path
       error: (response) ->
-        console.log(response)
         window.location = response.redirect_path
 
   restartSession: (e) ->
