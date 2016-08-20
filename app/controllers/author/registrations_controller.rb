@@ -8,18 +8,9 @@ class Author::RegistrationsController < Devise::RegistrationsController
   # end
 
   # POST /resource
-  def create
-    super
-    if @hex = @author.pending_game_session_hex
-      @pending = PendingGameSession.find_by(hex: @hex)
-      @author.game_sessions.create(
-        game_id: @pending.game_id,
-        props: @pending.props,
-        text: @peding.text
-      )
-      @pending.delete
-    end
-  end
+  # def create
+  #   super
+  # end
 
   # GET /resource/edit
   # def edit

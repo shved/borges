@@ -15,7 +15,7 @@ html
       .top_nav_wrapper
         = link_to t('.letter'), game_sessions_path, class: 'logo'
         - if current_author
-          = link_to 'logout', destroy_author_session_path(current_author), method: :delete
+          = link_to 'logout', destroy_author_session_path, method: :delete
           = link_to game_sessions_path(author: current_author), class: 'author_link' do
             p = current_author.at_name
             = image_tag 'author.png', size: '44x44', class: 'author_icon'
