@@ -10,13 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160805224927) do
+ActiveRecord::Schema.define(version: 20160820150136) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "authors", force: :cascade do |t|
-    t.string   "login"
+    t.string   "name"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
     t.string   "email",                  default: "", null: false
@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 20160805224927) do
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
     t.index ["email"], name: "index_authors_on_email", unique: true, using: :btree
-    t.index ["login", "email"], name: "index_authors_on_login_and_email", using: :btree
+    t.index ["name", "email"], name: "index_authors_on_name_and_email", using: :btree
     t.index ["reset_password_token"], name: "index_authors_on_reset_password_token", unique: true, using: :btree
   end
 

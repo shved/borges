@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :authors,
     path: 'auth',
     path_names: { sign_in: 'login', sign_out: 'logout' },
-    controllers: { sessions: 'writers/sessions' }
+    controllers: { sessions: 'author/sessions' }
 
   root to: "game_sessions#index"
 
