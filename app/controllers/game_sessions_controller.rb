@@ -1,5 +1,5 @@
 class GameSessionsController < ApplicationController
-  before_action :authenticate_user!, only: [:create]
+  before_action :authenticate_author!, only: [:create]
 
   def index
     @game_sessions = GameSession.order(created_at: :desc)
