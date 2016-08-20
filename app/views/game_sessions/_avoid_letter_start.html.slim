@@ -1,0 +1,27 @@
+.new_game#avoid_letter data-game-type=(@game.game_type)
+  h1.game_name
+    = @game.name
+    span
+      = select_tag('game_option', options_for_select(Game.alphabet), class: 'game_option')
+  .random_option.small_button
+    = t('.random_option')
+
+  .game_description
+    = simple_format @game.desc,
+                    class: 'game_caption caption',
+                    wrapper_tag: 'p'
+
+  = link_to new_game_session_path(game_type: @game_type, props: { letter: Game.alphabet.first }), class: 'new_game__link' do
+    = t('.start_game')
+
+ul.game_sessions
+  h2.games_title
+    | Последние результаты
+  = render @game_sessions
+
+- content_for :right_wrapper do
+  .right_wrapper__theme_suggestion
+    h3 = t('.suggest_title')
+    a.suggest_button.small_button rel="#"
+      = t('.suggest_button')
+    p.suggestion
