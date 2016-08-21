@@ -13,56 +13,8 @@
     color: #333;
     font-weight: 300;
   }
-  h1.game_name {
-    display: inline;
-    color: #333;
-    font-family: 'Merriweather', Georgia;
-    font-size: 24px;
-    font-weight: 900;
-    line-height: 24px;
-    vertical-align: top;
-    select.game_option {
-      width: 70px;
-    }
-    > span.game_option {
-      margin: 0 20px;
-      background-color: #fff600;
-      border-radius: 30px;
-      padding: 11px 16px 9px 16px;
-      font-weight: 300;
-      font-size: 24px;
-      color: #333;
-      line-height: 8px;
-      text-transform: uppercase;
-      position: relative;
-      top: 6px;
-    }
-    #game_option-button {
-      position: relative;
-      bottom: 10px;
-      margin: 0 20px;
-      height: 42px;
-      border: 1px solid #c6cfd6;
-      border-radius: 21px;
-      background: white;
-      &:focus {
-        outline: none;
-      }
-      .ui-selectmenu-text {
-          padding: 0;
-          padding-left: 18px;
-          padding-top: 4px;
-          font-family: 'Merriweather', Georgia;
-          font-size: 24px;
-          font-weight: 300;
-          color: #333;
-      }
-    }
-  }
   .random_option {
     display: inline;
-    position: relative;
-    top: -26px;
   }
   p.game_caption {
     margin-top: 40px;
@@ -131,6 +83,53 @@ ul.game_sessions {
         font-style: italic;
         color: gray;
       }
+    }
+  }
+}
+
+h1.game_name {
+  display: inline;
+  color: #333;
+  font-family: 'Merriweather', Georgia;
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 24px;
+  vertical-align: top;
+  select.game_option {
+    width: 70px;
+  }
+  > span.game_option {
+    margin: 0 20px;
+    background-color: #fff600;
+    border-radius: 30px;
+    padding: 11px 16px 9px 16px;
+    font-weight: 300;
+    font-size: 24px;
+    color: #333;
+    line-height: 8px;
+    text-transform: uppercase;
+    position: relative;
+    top: 6px;
+  }
+  #game_option-button {
+    position: relative;
+    bottom: 10px;
+    margin: 0 20px;
+    height: 42px;
+    border: 1px solid #c6cfd6;
+    border-radius: 21px;
+    background: white;
+    &:focus {
+      outline: none;
+    }
+    .ui-selectmenu-text {
+        padding: 0;
+        padding-left: 18px;
+        padding-top: 4px;
+        font-family: 'Merriweather', Georgia;
+        font-size: 24px;
+        font-weight: 300;
+        color: #333;
     }
   }
 }
