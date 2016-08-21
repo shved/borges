@@ -11,7 +11,7 @@ class GameSessionsController < ApplicationController
   def start
     @game_type = params[:game_type]
     @game = Game.find_by(game_type: @game_type)
-    @game_sessions = GameSession.limit(25)
+    @game_sessions = GameSession.send(@game_type.to_sym).limit(25)
   end
 
   def new

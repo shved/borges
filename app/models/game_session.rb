@@ -6,4 +6,8 @@ class GameSession < ApplicationRecord
   validates :text, length: { maximum: 50_000 }
 
   serialize :props
+
+  Game::TYPES.each do |type|
+    scope type, -> { joins(:game).where('games.game_type = ?', type) }
+  end
 end

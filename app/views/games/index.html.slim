@@ -1,6 +1,5 @@
-ul.games
-  .top_ray
+= content_for :main_header do
   h1.games_title = t('.title')
-  = render @games
-  .bottom_ray
 
+ul.games
+  = render @games

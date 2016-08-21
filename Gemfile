@@ -15,6 +15,7 @@ gem 'devise'
 gem 'typekit-rails'
 gem 'jquery-ui-rails'
 gem 'react-rails'
+gem 'autoprefixer-rails'
 
 group :development, :test do
   gem 'byebug', platform: :mri

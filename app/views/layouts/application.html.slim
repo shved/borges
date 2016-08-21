@@ -14,6 +14,8 @@ html
 
       .top_nav_wrapper
         = link_to t('.letter'), game_sessions_path, class: 'logo'
+        .main_header
+          = yield :main_header
         - if current_author
           = link_to 'logout', destroy_author_session_path, method: :delete
           = link_to game_sessions_path(author: current_author), class: 'author_link' do

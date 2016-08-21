@@ -25,6 +25,43 @@ body {
     max-width: 1200px;
     padding: 0;
     .top_nav_wrapper {
+      a.logo {
+        text-align: center;
+        margin-left: 44px;
+        margin-top: 76px;
+        display: inline-block;
+        line-height: 24px;
+        height: 32px;
+        width: 24px;
+        font-size: 48px;
+        color: black;
+        font-weight: 700;
+        font-family: 'Merriweather', sans-serif;
+        color: #222;
+      }
+      a.author_link {
+        margin-right: 30px;
+        float: right;
+        display: inline-block;
+        position: relative;
+        bottom: 43px;
+        image.author_icon {
+          display: block;
+          height: 44px;
+          width: 44px;
+        }
+      }
+      .main_header {
+        h1 {
+          display: inline-block;
+          color: #333;
+          font-family: 'Merriweather', Georgia;
+          font-size: 24px;
+          font-weight: 900;
+          line-height: 24px;
+          vertical-align: top;
+        }
+      }
     }
     .left_nav_wrapper {
       float: left;
@@ -57,43 +94,6 @@ body {
         width: 40px;
         height: 40px;
       }
-    }
-  }
-
-  .top_nav_wrapper {
-    a.logo {
-      text-align: center;
-      margin-left: 44px;
-      margin-top: 76px;
-      display: block;
-      line-height: 24px;
-      height: 32px;
-      width: 24px;
-      font-size: 48px;
-      color: black;
-      font-weight: 700;
-      font-family: 'Merriweather', sans-serif;
-      color: #222;
-    }
-    a.author_link {
-      margin-right: 30px;
-      float: right;
-      display: block;
-      position: relative;
-      bottom: 43px;
-      image.author_icon {
-        display: block;
-        height: 44px;
-        width: 44px;
-      }
-    }
-  }
-
-  .top_nav_wrapper {
-    ul.games:before {
-      background-color: #222;
-      height: 100px;
-      width: auto;
     }
   }
 

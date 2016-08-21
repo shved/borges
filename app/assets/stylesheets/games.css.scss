@@ -1,33 +1,15 @@
 ul.games {
   list-style: none;
-  background: #222;
-  overflow: visible;
   padding-bottom: 80px;
   margin-top: 30px;
-  .top_ray {
-    position: absolute;
-    width: 720px;
-    height: 206px;
-    top: 0px;
-    margin-left: -40px;
-    background: #222;
-  }
-  .bottom_ray {
-  }
   h1.games_title {
-    font-size: 12px;
     color: #8b97a0;
-    font-family: 'Merriweather', sans-serif;
-    font-weight: 300;
-    line-height: 16px;
-    margin-top: 96px;
   }
   li.game {
     margin: 0 0 20px 0;
     h3.game_index_title {
       margin: 20px 0 10px 0;
       a.game_title__link {
-        color: white;
         font-size: 16px;
         font-weight: 300;
         line-height: 16px;
@@ -37,14 +19,12 @@ ul.games {
       margin-top: 10px;
       margin: 0;
       font-size: small;
-      color: gray;
     }
     p.divider {
       margin-top: 40px;
       text-align: center;
       vertical-align: middle;
       letter-spacing: 10px;
-      color: white;
       font-size: 20px;
       font-weight: 500;
       font-family: 'Merriweather', Georgia;
