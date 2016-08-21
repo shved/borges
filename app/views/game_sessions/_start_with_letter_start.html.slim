@@ -1,11 +1,13 @@
-.new_game#start_with_letter data-game-type=(@game.game_type)
+- content_for :main_header do
   h1.game_name
     = @game.name
     span
       = select_tag('game_option', options_for_select(Game.alphabet), class: 'game_option')
-  .random_option.small_button
-    = t('.random_option')
+    span
+      .random_option.small_button
+        = t('.random_option')
 
+.new_game#start_with_letter data-game-type=(@game.game_type)
   .game_description
     = simple_format @game.desc,
                     class: 'game_caption caption',

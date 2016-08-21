@@ -12,29 +12,32 @@ html
       p.notice = notice
       p.alert = alert
 
-      .top_nav_wrapper
-        = link_to t('.letter'), game_sessions_path, class: 'logo'
+      .top_wrapper
+        .logo
+          = link_to t('.letter'), game_sessions_path, class: 'logo_link'
         .main_header
           = yield :main_header
-        - if current_author
-          = link_to 'logout', destroy_author_session_path, method: :delete
-          = link_to game_sessions_path(author: current_author), class: 'author_link' do
-            p = current_author.at_name
-            = image_tag 'author.png', size: '44x44', class: 'author_icon'
-        - else
-          = link_to new_author_registration_path, class: 'author_link' do
-            = image_tag 'author.png', size: '44x44', class: 'author_icon'
-
-      .left_nav_wrapper
-        nav.left_nav
-          = link_to games_path, class: 'games_link' do
-            = image_tag 'games.png', size: '42x42', class: 'games_icon'
+        .author
+          - if current_author
+            = link_to 'logout', destroy_author_session_path, method: :delete
+            = link_to game_sessions_path(author: current_author), class: 'author_link' do
+              p = current_author.at_name
+              = image_tag 'author.png', size: '44x44', class: 'author_icon'
+          - else
+            = link_to new_author_registration_path, class: 'author_link' do
+              = image_tag 'author.png', size: '44x44', class: 'author_icon'
 
       .content_wrapper
-        = yield
+        .left_wrapper
+          nav.left_nav
+            = link_to games_path, class: 'games_link' do
+              = image_tag 'games.png', size: '42x42', class: 'games_icon'
 
-      .right_wrapper
-        = yield :right_wrapper
+        .center_wrapper
+          = yield
+
+        .right_wrapper
+          = yield :right_wrapper
 
     = javascript_include_tag 'application'
 
