@@ -58,6 +58,26 @@ body {
             select.game_option {
               width: 70px;
             }
+            #game_option-button {
+              margin: 0 20px;
+              height: 42px;
+              border: 1px solid #c6cfd6;
+              border-radius: 21px;
+              background: white;
+              vertical-align: bottom;
+              &:focus {
+                outline: none;
+              }
+              .ui-selectmenu-text {
+                padding: 0;
+                padding-left: 18px;
+                padding-top: 4px;
+                font-family: 'Merriweather', Georgia;
+                font-size: 24px;
+                font-weight: 300;
+                color: #333;
+              }
+            }
           }
         }
         .random_option {
@@ -79,13 +99,13 @@ body {
     }
 
     .content_wrapper {
-      float: left;
-      width: 60%;
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      flex-wrap: nowrap;
+      justify-content: space-between;
       .left_wrapper {
-        float: left;
-        clear: none;
         width: 120px;
-        margin: 0;
         nav.left_nav {
           display: block;
           a.games_link {
@@ -102,11 +122,13 @@ body {
         }
       }
 
+      .center_wrapper {
+        flex-grow: 1;
+      }
+
       .right_wrapper {
         padding-top: 56px;
-        clear: none;
-        float: right;
-        width: 300px;
+        width: 350px;
       }
     }
   }
