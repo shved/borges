@@ -101,13 +101,13 @@
   # UI effects
 
   abuse: ->
-    $('.game_option').stop().animate({ backgroundColor: 'red' }, duration: 100, complete: ->
+    $('.selected_game_option').stop().animate({ backgroundColor: 'red' }, duration: 100, complete: ->
       $(this).animate({ backgroundColor: '#fff600' }, duration: 100, complete: ->
         $(this).animate({ backgroundColor: 'red' }, duration: 100, complete: ->
           $(this).animate({ backgroundColor: '#fff600' }, duration: 100))))
 
   warning: ->
-    $('.game_option').stop().animate({ backgroundColor: 'white' }, duration: 100, complete: ->
+    $('.selected_game_option').stop().animate({ backgroundColor: 'white' }, duration: 100, complete: ->
       $(this).animate({ backgroundColor: '#fff600' }, duration: 100, complete: ->
         $(this).animate({ backgroundColor: 'white' }, duration: 100, complete: ->
           $(this).animate({ backgroundColor: '#fff600' }, duration: 100))))
@@ -144,7 +144,7 @@
     `<div className='new_game' id='start_with_letter'>
       <h1 className='game_name'>
         {this.props.gameName}
-        <span className='game_option'>
+        <span className='selected_game_option'>
           {this.props.letter}
         </span>
       </h1>

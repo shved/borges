@@ -37,13 +37,10 @@ body {
         width: 120px;
         a.logo_link {
           margin-left: 40px;
-          line-height: 24px;
-          height: 32px;
-          width: 24px;
           font-size: 48px;
-          color: black;
+          line-height: 48px;
           font-weight: 700;
-          font-family: 'Merriweather', sans-serif;
+          font-family: 'Merriweather', Georgia;
           color: #222;
         }
       }
@@ -51,14 +48,21 @@ body {
       .main_header {
         flex-grow: 1;
         h1 {
+          display: inline;
           color: #333;
           font-family: 'Merriweather', Georgia;
           font-size: 24px;
           font-weight: 900;
-          line-height: 24px;
+          vertical-align: 9px;
+          span {
+            select.game_option {
+              width: 70px;
+            }
+          }
         }
         .random_option {
           display: inline;
+          vertical-align: 13px;
         }
       }
 
@@ -187,7 +191,7 @@ body {
     font-size: 10px;
     font-weight: 400;
     letter-spacing: 2px;
-    padding: 10px 23px 8px 27px;
+    padding: 9px 25px;
     cursor: pointer;
   }
 }
