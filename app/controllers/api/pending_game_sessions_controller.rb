@@ -3,7 +3,7 @@ module Api
     def create
       @pending_game_session = PendingGameSession.new(pending_game_session_params)
       @pending_game_session.hex = SecureRandom.hex(32)
-      if @pending_game_session.save!
+      if @pending_game_session.save
         render json: { redirect_path: new_author_registration_path, hex: @pending_game_session.hex }
       else
         render :nothing
