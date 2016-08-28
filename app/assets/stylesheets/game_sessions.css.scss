@@ -49,16 +49,8 @@
   }
 }
 
-.overflow { height: 200px; }
-
 ul.game_sessions {
   list-style: none;
-  h2.games_title {
-    font-size: 24px;
-    font-weight: 700;
-    color: #333;
-    font-family: 'Merriweather', Georgia;
-  }
   .game_session {
     a.game_session__name {
       color: #8b97a0;
@@ -67,16 +59,16 @@ ul.game_sessions {
     }
     p.game_session__text {
       margin: 8px auto;
-      font-size: medium;
+      font-size: 14px;
     }
     p.game_session__footer {
       margin-top: 8px;
       a.game_session__footer_author {
-        font-size: medium;
+        font-size: 14px;
       }
       span.game_session__footer_date {
         margin-left: 10px;
-        font-size: small;
+        font-size: 10px;
         font-style: italic;
         color: gray;
       }

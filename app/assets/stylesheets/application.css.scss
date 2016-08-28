@@ -34,9 +34,10 @@ body {
       justify-content: space-between;
 
       .logo {
-        width: 120px;
+        background-color: red;
+        min-width: 120px;
         a.logo_link {
-          margin-left: 40px;
+          margin: 42px;
           font-size: 48px;
           line-height: 48px;
           font-weight: 700;
@@ -46,7 +47,9 @@ body {
       }
 
       .main_header {
+        background-color: blue;
         flex-grow: 1;
+        flex-shrink: 1;
         h1 {
           display: inline;
           color: #333;
@@ -87,7 +90,8 @@ body {
       }
 
       .author {
-        width: 120px;
+        min-width: 120px;
+        background-color: yellow;
         a.author_link {
           margin-left: 40px;
           img.author_icon {
@@ -104,8 +108,10 @@ body {
       align-items: flex-start;
       flex-wrap: nowrap;
       justify-content: space-between;
+
       .left_wrapper {
-        width: 120px;
+        background-color: yellow;
+        min-width: 120px;
         nav.left_nav {
           display: block;
           a.games_link {
@@ -123,12 +129,15 @@ body {
       }
 
       .center_wrapper {
+        background-color: red;
         flex-grow: 1;
+        flex-shrink: 1;
       }
 
       .right_wrapper {
+        background-color: gray;
         padding-top: 56px;
-        width: 350px;
+        min-width: 350px;
       }
     }
   }
@@ -166,12 +175,12 @@ body {
   }
 
   h2 {
-    font-size: larger;
+    font-size: 20px;
     font-weight: 300;
   }
 
   h3 {
-    font-size: large;
+    font-size: 18px;
     font-weight: 300;
   }
 
@@ -189,19 +198,7 @@ body {
 
   textarea {
     resize: none;
-    border: black;
-    border-radius: 5px;
-    margin-top: 40px;
     width: 100%;
-    &:focus {
-      outline: none;
-    }
-  }
-
-  .fb-like {
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
   }
 
   .small_button {
