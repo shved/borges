@@ -37,6 +37,7 @@ body {
       .logo {
         background-color: red;
         min-width: 120px;
+        max-width: 120px;
         a.logo_link {
           margin-left: 44px;
           font-size: 48px;
@@ -92,9 +93,9 @@ body {
 
       .author {
         min-width: 200px;
+        max-width: 200px;
         background-color: yellow;
         a.author_link {
-          margin-left: 118px;
           img.author_icon {
             height: 44px;
             width: 44px;
@@ -113,6 +114,7 @@ body {
       .left_wrapper {
         background-color: yellow;
         min-width: 120px;
+        max-width: 120px;
         nav.left_nav {
           display: block;
           a.games_link {
@@ -139,6 +141,7 @@ body {
         background-color: gray;
         padding-top: 56px;
         min-width: 350px;
+        max-width: 350px;
       }
     }
   }
@@ -200,6 +203,12 @@ body {
   textarea {
     resize: none;
     width: 100%;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
   }
 
   .small_button {
