@@ -3,6 +3,7 @@
 #= require jquery-ui/selectmenu
 #= require jquery-ui/button
 #= require jquery-ui/effect.all
+#= require textarea-autosize
 #= require react
 #= require react_ujs
 #= require components

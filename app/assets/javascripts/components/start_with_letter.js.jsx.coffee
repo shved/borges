@@ -11,7 +11,7 @@
     session: 'active'
 
   componentDidMount: ->
-    $('.game_textarea').elastic()
+    $('.game_textarea').textareaAutoSize()
     $('.game_textarea').focus()
 
   gapTimeoutAmount: ->

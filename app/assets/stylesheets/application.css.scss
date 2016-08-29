@@ -1,4 +1,5 @@
 /*
+ *= require normalize-css
  *= require jquery-ui/selectmenu
  *= require jquery-ui/button
  *= require_tree .
@@ -26,7 +27,7 @@ body {
     padding: 0;
 
     .top_wrapper {
-      height: 120px;
+      height: 140px;
       display: flex;
       flex-direction: row;
       align-items: center;
@@ -37,7 +38,7 @@ body {
         background-color: red;
         min-width: 120px;
         a.logo_link {
-          margin: 42px;
+          margin-left: 44px;
           font-size: 48px;
           line-height: 48px;
           font-weight: 700;
@@ -90,10 +91,10 @@ body {
       }
 
       .author {
-        min-width: 120px;
+        min-width: 200px;
         background-color: yellow;
         a.author_link {
-          margin-left: 40px;
+          margin-left: 118px;
           img.author_icon {
             height: 44px;
             width: 44px;
@@ -115,7 +116,7 @@ body {
         nav.left_nav {
           display: block;
           a.games_link {
-            margin: 98px auto;
+            margin: 20px auto;
             display: block;
             width: 42px;
             height: 42px;

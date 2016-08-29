@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '>= 5.0.0'
+gem 'bundler', '>= 1.8.4'
 gem 'pg', '~> 0.18'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
@@ -16,6 +17,11 @@ gem 'typekit-rails'
 gem 'jquery-ui-rails'
 gem 'react-rails'
 gem 'autoprefixer-rails'
+
+source 'https://rails-assets.org' do
+  gem 'rails-assets-normalize-css'
+  gem 'rails-assets-textarea-autosize'
+end
 
 group :development, :test do
   gem 'byebug', platform: :mri
