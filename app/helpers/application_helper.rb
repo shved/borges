@@ -5,7 +5,9 @@ module ApplicationHelper
   end
 
   def game_session_timestamp(created_at)
-    # TODO today/1 day ago/ etc
-    created_at.to_s
+    case I18n.locale
+    when 'ru' then Russian::strftime(created_at, "%d %B '%y")
+    when 'en' then created_at.strftime("%d %b '%y")
+    end
   end
 end

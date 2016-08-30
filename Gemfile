@@ -17,6 +17,7 @@ gem 'typekit-rails'
 gem 'jquery-ui-rails'
 gem 'react-rails'
 gem 'autoprefixer-rails'
+gem 'russian'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-normalize-css'
