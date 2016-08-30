@@ -35,7 +35,7 @@ body {
       justify-content: space-between;
 
       .logo {
-        background-color: red;
+        // background-color: red;
         min-width: 120px;
         max-width: 120px;
         a.logo_link {
@@ -49,7 +49,7 @@ body {
       }
 
       .main_header {
-        background-color: blue;
+        // background-color: blue;
         padding: 10px;
         flex-grow: 1;
         flex-shrink: 1;
@@ -89,9 +89,10 @@ body {
 
       .author {
         padding: 10px;
+        padding-right: 40px;
         min-width: 300px;
         max-width: 300px;
-        background-color: yellow;
+        // background-color: yellow;
         font-size: 16px;
         text-align: right;
         a {
@@ -108,7 +109,7 @@ body {
       justify-content: space-between;
 
       .left_wrapper {
-        background-color: yellow;
+        // background-color: yellow;
         min-width: 120px;
         max-width: 120px;
         nav.left_nav {
@@ -128,15 +129,16 @@ body {
       }
 
       .center_wrapper {
-        background-color: red;
+        // background-color: red;
         padding: 10px;
         flex-grow: 1;
         flex-shrink: 1;
       }
 
       .right_wrapper {
-        background-color: blue;
+        // background-color: blue;
         padding: 10px;
+        padding-left: 30px;
         min-width: 350px;
         max-width: 350px;
       }
@@ -197,7 +199,7 @@ body {
     font-size: 12px;
   }
 
-  input a span textarea button {
+  input a span button {
     &:focus {
       outline: none;
     }
@@ -206,6 +208,9 @@ body {
   textarea {
     resize: none;
     width: 100%;
+    &:focus {
+      outline: none;
+    }
   }
 
   ul {
