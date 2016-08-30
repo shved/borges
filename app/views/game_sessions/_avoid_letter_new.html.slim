@@ -1,6 +1,10 @@
+- content_for :main_header do
+  h1.game_name
+    = @game.name
+    span.selected_game_option = @game_session.props[:letter]
+
 = react_component('AvoidLetter',
   letter: @game_session.props[:letter],
-  gameName: @game.name,
   gamePrompt: t('.game_prompt').sample,
   gameId: @game.id,
   authorSignedIn: current_author.present?)

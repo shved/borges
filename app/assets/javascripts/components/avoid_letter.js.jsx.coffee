@@ -1,7 +1,6 @@
 @AvoidLetter = React.createClass
   propTypes:
     letter: React.PropTypes.string
-    gameName: React.PropTypes.string
     gamePrompt: React.PropTypes.string
     gameId: React.PropTypes.number
     authorSignedIn: React.PropTypes.bool
@@ -133,12 +132,6 @@
     else
       disabled = false
     `<div className='new_game' id='avoid_letter'>
-      <h1 className='game_name'>
-        {this.props.gameName}
-        <span className='game_option'>
-          {this.props.letter}
-        </span>
-      </h1>
       <textarea className='game_textarea'
         value={this.state.text}
         placeholder={this.props.gamePrompt}

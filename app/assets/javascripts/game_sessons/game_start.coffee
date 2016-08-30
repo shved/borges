@@ -1,5 +1,5 @@
 $ ->
-  if $('#start_with_letter').length > 0
+  if $('#start_with_letter').length > 0 || $('#avoid_letter').length > 0
     expanded_style = {
       'border-bottom': '1px solid white'
       'border-bottom-right-radius': '0'

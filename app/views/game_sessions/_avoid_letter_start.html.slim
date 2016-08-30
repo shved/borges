@@ -1,4 +1,4 @@
-.new_game#avoid_letter data-game-type=(@game.game_type)
+- content_for :main_header do
   h1.game_name
     = @game.name
     span
@@ -6,6 +6,7 @@
   .random_option.small_button
     = t('.random_option')
 
+.new_game#avoid_letter data-game-type=(@game.game_type)
   .game_description
     = simple_format @game.desc,
                     class: 'game_caption caption',
