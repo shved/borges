@@ -19,12 +19,13 @@ html
           = yield :main_header
         .author
           - if current_author
-            /= link_to 'logout', destroy_author_session_path, method: :delete
-            = link_to current_author.at_name, game_sessions_path(author: current_author), class: 'author_link'
+            = link_to current_author.at_name, game_sessions_path(author_id: current_author)
+            span =< '|'
+            =< link_to 'logout', destroy_author_session_path, method: :delete
           - else
-            = link_to 'register', new_author_registration_path, class: 'author_link'
-            =< 'or'
-            =< link_to 'login', new_author_session_path, class: 'author_link'
+            = link_to 'register', new_author_registration_path
+            span =< '|'
+            =< link_to 'login', new_author_session_path
 
       .content_wrapper
         .left_wrapper

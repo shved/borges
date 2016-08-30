@@ -1,14 +1,11 @@
 ul.games {
-  list-style: none;
-  padding-bottom: 80px;
-  margin-top: 30px;
   h1.games_title {
     color: #8b97a0;
   }
   li.game {
     margin: 0 0 20px 0;
     h3.game_index_title {
-      margin: 20px 0 10px 0;
+      margin: 0 0 10px 0;
       a.game_title__link {
         font-size: 16px;
         font-weight: 300;
@@ -33,9 +30,7 @@ ul.games {
 }
 
 .right_wrapper__theme_suggestion {
-  margin-top: -45px;
   h3 {
-    color: #222;
     font-style: italic;
     margin: 0 0 20px 0;
   }

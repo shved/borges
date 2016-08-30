@@ -4,14 +4,12 @@
 
 .new_game {
   width: 100%;
-  position: relative;
-  top: -30px;
   textarea.game_textarea {
-    margin-top: 100px;
     font-family: 'Merriweater', Georgia;
     font-size: 24px;
     color: #333;
     font-weight: 300;
+    border: none;
   }
   p.game_caption {
     margin-top: 40px;
@@ -87,7 +85,6 @@ h1.game_name {
     line-height: 8px;
     text-transform: uppercase;
     position: relative;
-    top: 6px;
   }
 }
 

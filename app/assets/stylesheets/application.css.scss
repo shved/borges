@@ -50,15 +50,11 @@ body {
 
       .main_header {
         background-color: blue;
+        padding: 10px;
         flex-grow: 1;
         flex-shrink: 1;
         h1 {
           display: inline;
-          color: #333;
-          font-family: 'Merriweather', Georgia;
-          font-size: 24px;
-          font-weight: 900;
-          vertical-align: 9px;
           span {
             select.game_option {
               width: 70px;
@@ -92,14 +88,14 @@ body {
       }
 
       .author {
-        min-width: 200px;
-        max-width: 200px;
+        padding: 10px;
+        min-width: 300px;
+        max-width: 300px;
         background-color: yellow;
-        a.author_link {
-          img.author_icon {
-            height: 44px;
-            width: 44px;
-          }
+        font-size: 16px;
+        text-align: right;
+        a {
+          font-size: 16px;
         }
       }
     }
@@ -118,7 +114,7 @@ body {
         nav.left_nav {
           display: block;
           a.games_link {
-            margin: 20px auto;
+            margin: 5px auto;
             display: block;
             width: 42px;
             height: 42px;
@@ -133,13 +129,14 @@ body {
 
       .center_wrapper {
         background-color: red;
+        padding: 10px;
         flex-grow: 1;
         flex-shrink: 1;
       }
 
       .right_wrapper {
-        background-color: gray;
-        padding-top: 56px;
+        background-color: blue;
+        padding: 10px;
         min-width: 350px;
         max-width: 350px;
       }
@@ -175,17 +172,23 @@ body {
 
   h1 {
     font-size: 24px;
-    font-weight: 400;
+    font-weight: 900;
+    color: #333;
+    font-family: 'Merriweather', Georgia;
   }
 
   h2 {
     font-size: 20px;
-    font-weight: 300;
+    font-weight: 400;
+    color: #333;
+    font-family: 'Merriweather', Georgia;
   }
 
   h3 {
     font-size: 18px;
     font-weight: 300;
+    color: #333;
+    font-family: 'Merriweather', Georgia;
   }
 
   a {
@@ -210,6 +213,8 @@ body {
     padding: 0;
     list-style-type: none;
   }
+
+  .selectmenu_overflow { height: 200px; }
 
   .small_button {
     height: 30px;

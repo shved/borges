@@ -1,7 +1,3 @@
-- content_for :main_header do
-  h1 = @game.name
-
-div id=(@game_type)
 = render partial: "#{@game_type}_new"
 
 - content_for :right_wrapper do

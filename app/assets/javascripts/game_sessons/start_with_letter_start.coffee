@@ -19,7 +19,7 @@ $ ->
         href = $('.new_game__link').attr('href')
         href = href.split('=').slice(0, -1).join('=') + '=' + encodeURI(ui.item.value)
         $('.new_game__link').attr('href', href)
-    }).selectmenu('menuWidget').addClass('overflow')
+    }).selectmenu('menuWidget').addClass('selectmenu_overflow')
 
     $('.new_game__link').button()
 
@@ -33,7 +33,7 @@ $ ->
         data: data
         success: (response) ->
           $('p.suggestion').data('suggestionId', response.id)
-          $('p.suggestion').text(response.text)
+          $('p.suggestion').text("— " + response.text)
         error: (response) ->
           console.log(response, arguments)
     )

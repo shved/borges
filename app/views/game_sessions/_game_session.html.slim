@@ -3,7 +3,7 @@ li.game_session
   p.game_session__text
     = game_session.text
   p.game_session__footer
-    = link_to game_session.author.at_name, game_sessions_path(author: game_session.author), class: 'game_session__footer_author'
+    = link_to game_session.author.at_name, game_sessions_path(author_id: game_session.author), class: 'game_session__footer_author'
     span.game_session__footer_date
       = game_session_timestamp(game_session.created_at)
 
