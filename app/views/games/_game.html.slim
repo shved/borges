@@ -1,5 +1,6 @@
 li.game
-  h3.game_index_title = link_to game.name, start_game_sessions_path(game_type: game.game_type), class: 'game_title__link'
+  h3.game_index_title
+    = link_to game.name, start_game_sessions_path(game_type: game.game_type), class: "game_title__link #{'disabled' if game.id == 3}"
   p
     = simple_format game.desc,
                     class: 'game_caption caption',

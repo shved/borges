@@ -233,4 +233,10 @@ body {
     padding: 9px 25px;
     cursor: pointer;
   }
+
+  .disabled {
+    pointer-events: none;
+    color: gray;
+    cursor: pointer;
+  }
 }
