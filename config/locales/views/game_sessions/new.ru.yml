@@ -1,18 +1,17 @@
 ru:
   game_sessions:
+    start:
+      suggest_title: "Я не знаю о чем писать"
+      suggest_button: ПОДСКАЖИТЕ МНЕ
     start_with_letter_start:
       random_option: СЛУЧАЙНО
       start_game: НАЧАТЬ ПИСАТЬ
       first_letter: а
-      suggest_title: "Я не знаю о чем писать"
-      suggest_button: ПОДСКАЖИТЕ МНЕ
     start_with_letter_new:
       game_prompt: ["Удиви меня.", "Удиви себя.", "Ну, погнали!", "Можете начинать.", "Все только и ждут, когда вы уже начнете писать.", "Давай, братан, я в тебя верю."]
     avoid_letter_start:
       random_option: СЛУЧАЙНО
       start_game: НАЧАТЬ ПИСАТЬ
       first_letter: а
-      suggest_title: "Я не знаю о чем писать"
-      suggest_button: ПОДСКАЖИТЕ МНЕ
     avoid_letter_new:
       game_prompt: ["Всего одну буковку надо избегать. Всего одну.", "Ну, что, начнем?", "Самое простое задание. Начинай."]

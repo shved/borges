@@ -4,6 +4,7 @@
 
 .new_game {
   width: 100%;
+  text-align: center;
   textarea.game_textarea {
     font-family: 'Merriweater', Georgia;
     font-size: 24px;
@@ -12,11 +13,12 @@
     border: none;
   }
   p.game_caption {
+    text-align: left;
     font-size: 14px;
     line-height: 28px;
   }
   .new_game__link {
-    margin: 40px 0 0 250px;
+    margin: 40px auto;
     padding: 24px 20px;
     background: white;
     border: 1px solid #c6cfd6;
