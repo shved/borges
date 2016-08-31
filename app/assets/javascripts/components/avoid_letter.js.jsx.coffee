@@ -10,7 +10,7 @@
     session: 'active'
 
   componentDidMount: ->
-    $('.game_textarea').elastic()
+    $('.game_textarea').textareaAutoSize()
     $('.game_textarea').focus()
 
   gapTimeoutAmount: ->
@@ -33,12 +33,14 @@
 
     text = e.target.value
     char = text.slice(-1)
-    if char.match(///[#{@props.letter}|#{@props.letter.toUpperCase()}]|[^-а-яА-ЯЁё—(){}@'"‘“« ,.:;”’»?!#$%*+]///)
+    if char.match(///[#{@props.letter}|#{@props.letter.toUpperCase()}]|[^\sа-яА-ЯЁё—(){}@'"‘“« ,.:;”’»?!#$%*+-]///)
       @abuse()
-      new_text = text.slice(0, -1).replace(/[^-а-яё—(){}@'"‘“« ,.:;”’»?!#$%*+]/gi, '')
-    unless new_text.length < 1
+      text = text.slice(0, -1)
+    @setState text: text
+
+    unless text.length < 1
       @gapTimeout = setTimeout @gap, @gapTimeoutAmount()
-      @setState text: new_text
+
 
   preventPaste: (e) ->
     @abuse()
@@ -91,13 +93,13 @@
   # UI effects
 
   abuse: ->
-    $('.game_option').stop().animate({ backgroundColor: 'red' }, duration: 100, complete: ->
+    $('.selected_game_option').stop().animate({ backgroundColor: 'red' }, duration: 100, complete: ->
       $(this).animate({ backgroundColor: '#fff600' }, duration: 100, complete: ->
         $(this).animate({ backgroundColor: 'red' }, duration: 100, complete: ->
           $(this).animate({ backgroundColor: '#fff600' }, duration: 100))))
 
   warning: ->
-    $('.game_option').stop().animate({ backgroundColor: 'white' }, duration: 100, complete: ->
+    $('.selected_game_option').stop().animate({ backgroundColor: 'white' }, duration: 100, complete: ->
       $(this).animate({ backgroundColor: '#fff600' }, duration: 100, complete: ->
         $(this).animate({ backgroundColor: 'white' }, duration: 100, complete: ->
           $(this).animate({ backgroundColor: '#fff600' }, duration: 100))))
@@ -131,6 +133,7 @@
       disabled = true
     else
       disabled = false
+
     `<div className='new_game' id='avoid_letter'>
       <textarea className='game_textarea'
         value={this.state.text}

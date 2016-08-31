@@ -92,13 +92,13 @@ h1.game_name {
   .complete_session_buttons__span {
     margin: 20px auto;
     display: block;
-    .submit_session {
+    text-align: center;
+    .submit_session, .sign_in_to_submit_session {
       height: 50px;
       cursor: pointer;
       color: #333;
       padding: 26px 20px;
       margin: 10px auto;
-      margin-left: 230px;
       background: white;
       border: 1px solid #c6cfd6;
       border-radius: 5px;
@@ -117,7 +117,6 @@ h1.game_name {
       background-color: white;
       height: auto;
       margin: 10px auto;
-      margin-left: 277px;
     }
   }
 }

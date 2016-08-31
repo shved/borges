@@ -34,7 +34,7 @@
     text = e.target.value
     char = text.slice(-1)
     # for the first text symbol
-    if text.length < 2 && text[0].match(///[^#{@props.letter}|#{@props.letter.toUpperCase()}|—|\-|(|{|@|'|"|‘|“|«|\\n]///)
+    if text.length == 1 && text[0].match(///[^#{@props.letter}|#{@props.letter.toUpperCase()}|—|\-|(|{|@|'|"|‘|“|«|\\n]///)
       @abuse()
       text = ''
     # the symbol is another letter
@@ -45,9 +45,10 @@
           @abuse()
           text = text.slice(0, -1)
     new_text = text.replace(/[^-а-яё—(){}@'"‘“« ,.:;”’»?!#$%*+]/gi, '')
+    @setState text: new_text
+
     unless new_text.length < 1
       @gapTimeout = setTimeout @gap, @gapTimeoutAmount()
-      @setState text: new_text
 
   preventPaste: (e) ->
     @abuse()
