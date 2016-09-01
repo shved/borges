@@ -9,7 +9,7 @@ Game.create!(
   game_type: "avoid_letter",
   name_en: "Avoid the letter",
   name_ru: "Не использовать букву",
-  position: 1,
+  position: 0,
   props: [:letter]
 )
 
@@ -19,7 +19,7 @@ Game.create!(
   game_type: "start_with_letter",
   name_en: "Start with the letter",
   name_ru: "Начинать с буквы",
-  position: 0,
+  position: 1,
   props: [:letter]
 )
 
