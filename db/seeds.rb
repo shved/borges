@@ -60,7 +60,7 @@ ThemeSuggestion.create!(
 )
 
 ThemeSuggestion.create!(
-  game_types => ["start_with_letter", "avoid_letter", "wrap_word"],
-  text_en => "Describe an erotic scene as you are an six ears old girl.",
-  text_ru => "Опишите впечатления от случайно увиденной эротической сцены от лица шестилетней девочки."
+  game_types: ["start_with_letter", "avoid_letter", "wrap_word"],
+  text_en: "Describe an erotic scene as you are an six ears old girl.",
+  text_ru: "Опишите впечатления от случайно увиденной эротической сцены от лица шестилетней девочки."
 )
