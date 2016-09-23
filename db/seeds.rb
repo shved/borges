@@ -3,7 +3,7 @@ ThemeSuggestion.delete_all
 
 ### games
 
-Game.create!(
+game1 = Game.create!(
   desc_en: "If you want to fuck the sky,\\nteach your penis how to fly.",
   desc_ru: "Напишите осмысленный текст, не используя одну букву алфавита.\nПостарайтесь не делать глупостей. Выпить и на дискотеку. Строго. Че еще надо молодому?\nВы должны писать не останавливаясь, игра закончится после 5 секунд бездействия.",
   game_type: "avoid_letter",
@@ -13,7 +13,7 @@ Game.create!(
   props: [:letter]
 )
 
-Game.create!(
+game2 = Game.create!(
   desc_en: "If you want to fuck the sky,\\nteach your penis how to fly.",
   desc_ru: "Напишите осмысленный текст, в котором все слова будут начинаться на определенную букву.\nПостарайтесь не делать глупостей. Выпить и на дискотеку. Строго. Че еще надо молодому?\nВы должны писать не останавливаясь, игра закончится после 5 секунд бездействия. Можно вводить только кириллические символы (такие правила, что поделаешь).",
   game_type: "start_with_letter",
@@ -23,7 +23,7 @@ Game.create!(
   props: [:letter]
 )
 
-Game.create!(
+game3 = Game.create!(
   desc_en: "If you want to fuck the sky,\\nteach your penis how to fly.",
   desc_ru: "Перед каждым новым предложением вы будете получать определенное слово, которое обязательно должно присутствовать в предложении. Максимальное количество слов в одном предложении — 20.\nПостарайтесь не делать глупостей. Выпить и на дискотеку. Строго. Че еще надо молодому?\nВы должны писать не останавливаясь, игра закончится после 5 секунд бездействия.",
   game_type: "wrap_word",
@@ -32,6 +32,13 @@ Game.create!(
   position: 2,
   props: [:words]
 )
+
+game1.id = 1
+game1.save!
+game2.id = 2
+game2.save!
+game3.id = 3
+game3.save!
 
 ### game suggestions
 
