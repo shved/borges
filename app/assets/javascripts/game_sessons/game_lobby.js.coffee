@@ -10,7 +10,7 @@ $ ->
       'border-radius': '21px'
     }
 
-    # start
+    # lobby
     $('select.game_option').selectmenu({
       select: (event, ui) ->
         event.stopPropagation()

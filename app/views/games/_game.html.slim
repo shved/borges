@@ -1,7 +1,7 @@
 li.game
   h3.game_index_title
     = link_to game.name,
-      start_game_sessions_path(game_type: game.game_type),
+      lobby_game_sessions_path(game_type: game.game_type),
       class: "game_title__link #{'disabled' if game.game_type == 'wrap_word'}"
   p
     = simple_format game.desc,

@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
   resources :games, only: [:index]
   resources :game_sessions, only: [:new, :create, :index] do
-    get :start, on: :collection
+    get :lobby, on: :collection
   end
   resources :likes, only: [:create]
 

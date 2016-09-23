@@ -8,7 +8,7 @@ class GameSessionsController < ApplicationController
     @game_sessions = @game_sessions.take(10)
   end
 
-  def start
+  def lobby
     @game_type = params[:game_type]
     @game = Game.find_by(game_type: @game_type)
     @game_sessions = GameSession.send(@game_type.to_sym).limit(25)

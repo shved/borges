@@ -1,15 +1,15 @@
 en:
   game_sessions:
-    start:
+    lobby:
       suggest_title: "I have no idea what to write about"
       suggest_button: Suggest a theme
-    start_with_letter_start:
+    start_with_letter_lobby:
       random_option: RANDOM
       start_game: BEGIN TO WRITE
       first_letter: a
     start_with_letter_new:
       game_prompt: ["Impress me.", "C'mon fellow.", "Get it on.", "Psst! Lets write something"]
-    avoid_letter_start:
+    avoid_letter_lobby:
       random_option: RANDOM
       start_game: BEGIN TO WRITE
       first_letter: a
