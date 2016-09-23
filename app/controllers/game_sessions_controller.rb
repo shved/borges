@@ -2,7 +2,7 @@ class GameSessionsController < ApplicationController
   before_action :authenticate_author!, only: [:create]
 
   def index
-    @game_sessions = GameSession.order(created_at: :desc)
+    @game_sessions = GameSession.joins(:game).order(created_at: :desc)
     @game_sessions = @game_sessions.where(author_id: params[:author_id]) if params[:author_id]
     @game_sessions = @game_sessions.where(game: params[:game_id]) if params[:game_id]
     @game_sessions = @game_sessions.take(10)
@@ -22,8 +22,7 @@ class GameSessionsController < ApplicationController
   end
 
   def create
-    @author = Author.last
-    @game_session = @author.game_sessions.new(game_session_params)
+    @game_session = current_author.game_sessions.new(game_session_params)
     if @game_session.save!
       flash[:notice] = 'saved successfully!'
       render json: { redirect_path: game_sessions_path }
@@ -36,6 +35,7 @@ class GameSessionsController < ApplicationController
   private
 
   def game_session_params
-    params.require(:game_session).permit(:text, :game_id, :props)
+    props_params = params[:game_session][:props].keys
+    params.require(:game_session).permit(:text, :game_id, props: props_params)
   end
 end

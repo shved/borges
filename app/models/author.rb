@@ -2,9 +2,9 @@ class Author < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  after_create :save_game_session
+  after_create :save_pending_game_session
 
-  has_many :game_sessions
+  has_many :game_sessions, dependent: :destroy
 
   validates :name, uniqueness: true
   validates :email, uniqueness: true
@@ -17,7 +17,7 @@ class Author < ApplicationRecord
 
   private
 
-  def save_game_session
+  def save_pending_game_session
     if pending_game_session_hex.present?
       if pending = PendingGameSession.find_by(hex: pending_game_session_hex)
         GameSession.create(

@@ -1,5 +1,6 @@
 li.game_session
   = link_to game_session.game.name, game_sessions_path(game_type: game_session.game.game_type), class: 'game_session__name'
+  span.game_session__option = session_specific_option(game_session)
   p.game_session__text
     = game_session.text
   p.game_session__footer

@@ -62,7 +62,8 @@
       pending_game_session:
         text: $('textarea.game_textarea').val()
         game_id: @props.gameId
-        props: JSON.stringify({ letter: @props.letter })
+        props:
+          letter: @props.letter
     $.ajax
       type: 'POST'
       url: '/api/pending_game_sessions'
@@ -77,7 +78,8 @@
       game_session:
         text: $('textarea.game_textarea').val()
         game_id: @props.gameId
-        props: JSON.stringify({ letter: @props.letter })
+        props:
+          letter: @props.letter
     $.ajax
       type: 'POST'
       url: '/game_sessions'

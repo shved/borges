@@ -10,4 +10,12 @@ module ApplicationHelper
     when 'en' then created_at.strftime("%d %b '%y")
     end
   end
+
+  def session_specific_option(game_session)
+    case game_session.game.game_type
+    when 'start_with_letter', 'avoid_letter' then game_session.props['letter']
+    else
+      nil
+    end
+  end
 end
