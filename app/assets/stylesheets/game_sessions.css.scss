@@ -83,6 +83,12 @@ ul.game_sessions {
         color: gray;
       }
     }
+    p.game_session__footer_likes {
+      font-size: 12px;
+      span.game_session__footer_likes {
+        font-size: 14px;
+      }
+    }
   }
 }
 

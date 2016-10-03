@@ -1,6 +1,7 @@
 class GameSession < ApplicationRecord
   belongs_to :game
   belongs_to :author
+  has_many :likes, dependent: :destroy
 
   validates :text, presence: true
   validates :text, length: { maximum: 50_000 }

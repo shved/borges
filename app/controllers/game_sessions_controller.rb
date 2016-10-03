@@ -2,10 +2,10 @@ class GameSessionsController < ApplicationController
   before_action :authenticate_author!, only: [:create]
 
   def index
-    @game_sessions = GameSession.joins(:game).order(created_at: :desc)
+    @game_sessions = GameSession.joins(:game).includes(:likes).includes(:author).order(created_at: :desc)
     @game_sessions = @game_sessions.where(author_id: params[:author_id]) if params[:author_id]
     @game_sessions = @game_sessions.where(game: params[:game_id]) if params[:game_id]
-    @game_sessions = @game_sessions.take(10)
+    @game_sessions = @game_sessions.take(100)
   end
 
   def lobby
@@ -23,7 +23,7 @@ class GameSessionsController < ApplicationController
 
   def create
     @game_session = current_author.game_sessions.new(game_session_params)
-    if @game_session.save!
+    if @game_session.save
       flash[:notice] = 'saved successfully!'
       render json: { redirect_path: game_sessions_path }
     else

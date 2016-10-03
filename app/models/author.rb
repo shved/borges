@@ -5,6 +5,7 @@ class Author < ApplicationRecord
   after_create :save_pending_game_session
 
   has_many :game_sessions, dependent: :destroy
+  has_many :likes
 
   validates :name, uniqueness: true
   validates :email, uniqueness: true
@@ -12,7 +13,7 @@ class Author < ApplicationRecord
   attr_accessor :pending_game_session_hex
 
   def at_name
-    name.prepend('@') if name.present?
+    "@#{ name }" if name.present?
   end
 
   private
