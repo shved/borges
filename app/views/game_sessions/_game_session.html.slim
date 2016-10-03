@@ -8,7 +8,7 @@ li.game_session
     span.game_session__footer_date
       = game_session_timestamp(game_session.created_at)
   p.game_session__footer_likes
-    - if current_author.id == game_session.author.id
+    - if current_author.try!(:id) == game_session.author.id
       | likes:
     - else
       = link_to 'like', likes_path(game_session_id: game_session), class: 'game_session__footer_like', remote: :true, method: :post
