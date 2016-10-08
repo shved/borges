@@ -9,7 +9,7 @@ class Game < ApplicationRecord
 
   TYPES = [:start_with_letter, :avoid_letter, :wrap_word].freeze
   TYPES.each do |type|
-    self.class.send(:define_method, type) do
+    define_singleton_method type do
       find_by(game_type: type)
     end
   end
