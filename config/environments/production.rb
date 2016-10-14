@@ -87,4 +87,10 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   config.react.variant = :production
+
+  config.log_tags = [
+    :uuid,
+    :remote_ip,
+    lambda { |req| "user-#{req.cookie_jar.signed[:uid]}" || "anon" }
+  ]
 end
