@@ -41,7 +41,6 @@
     unless text.length < 1
       @gapTimeout = setTimeout @gap, @gapTimeoutAmount()
 
-
   preventPaste: (e) ->
     @abuse()
     e.preventDefault()
